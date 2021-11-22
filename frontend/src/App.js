@@ -20,21 +20,10 @@ function App() {
           <nav style={{backgroundColor: "#2c2828", color:"#c7950c", maxWidth: "195px"}}>
             <ul>
               <li>
-                <a>
-                <span class="title">Index</span>
-                </a>
-                </li>
-              <li></li>
-              <li>
-                <a>
-                Connexion
-                </a>
-                </li>
-              <li>
-                <a>
-                  Aide
-                  </a>
-                </li>
+              <a><span class="title">Home</span></a></li>
+              <li>User</li>
+              <li><a>News</a></li>
+              <li><a>Informations</a></li>
             </ul>
           </nav>
           <div style={{marginTop: "1rem", display: "grid", gridGap: '1rem', gridTemplateColumns: "repeat(6, 1fr)", width: "100%"}}>
