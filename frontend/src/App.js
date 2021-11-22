@@ -15,18 +15,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div style={{backgroundColor: "#2c2828", color:"#c7950c"}}>Cryptomonnaies</div>
-        <main style={{display: "flex", gap: "1rem", height: "100%"}}>
-          <nav style={{backgroundColor: "#2c2828", color:"#c7950c", maxWidth: "195px"}}>
+        <div className = "Title">Cryptomonnaies</div>
+        <main className = "Main">
+          <nav className = "Menu">
             <ul>
-              <li>
-              <a><span class="title">Home</span></a></li>
-              <li>User</li>
+              <li><a><span class="Title">Home</span></a></li>
+              <li><a>User</a></li>
               <li><a>News</a></li>
               <li><a>Informations</a></li>
             </ul>
           </nav>
-          <div style={{marginTop: "1rem", display: "grid", gridGap: '1rem', gridTemplateColumns: "repeat(6, 1fr)", width: "100%"}}>
+          <div className = "Widget">
             <Box style={{gridColumnStart: 1, gridColumnEnd: 3}}>1</Box>
             <Box style={{gridColumnStart: 3, gridColumnEnd: 5}}>2</Box>
             <Box style={{gridColumnStart: 5, gridColumnEnd: 7}}>3</Box>
@@ -34,12 +33,19 @@ function App() {
             <Box style={{gridColumnStart: 4, gridColumnEnd: 7, gridRow: "2 / span 6"}}>5</Box>
             <Box style={{gridColumnStart: 1, gridColumnEnd: 7, gridRow: "8 / span 12"}}>6</Box>
           </div>
-          <nav style={{maxWidth: "195px"}}>
+          <nav className = "Total">
             <ul>
-              <li>Some</li>
-              <li>Elements</li>
-              <li>Some</li>
-              <li>Elements</li>
+              <a>Total <br/>Cryptocurrencies</a><br/>
+              <a></a><br/><br/>
+
+              <a>Total Exchanges</a><br/>
+              <a></a><br/><br/>
+
+              <a>Total Market Cap</a><br/>
+              <a></a><br/><br/>
+
+              <a>Total 24h Volume</a><br/>
+              <a></a><br/><br/>
             </ul>
           </nav>
         </main>
