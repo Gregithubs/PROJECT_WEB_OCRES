@@ -1,10 +1,11 @@
 import React, { Component }  from 'react';
 import './App.css';
 
+
 const Box = (props) => {
   const style = props.style?props.style:{}
   return (
-    <div style={{...style, backgroundColor:'white', color: "black"}}>
+    <div style={{...style, backgroundColor:'#2c2828', color: "#c7950c"}}>
       {props.children}
     </div>
   )
@@ -14,15 +15,27 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div style={{backgroundColor: "grey"}}>Header</div>
+        <div style={{backgroundColor: "#2c2828", color:"#c7950c"}}>Cryptomonnaies</div>
         <main style={{display: "flex", gap: "1rem", height: "100%"}}>
-          <nav style={{backgroundColor: "grey", maxWidth: "195px"}}>
+          <nav style={{backgroundColor: "#2c2828", color:"#c7950c", maxWidth: "195px"}}>
             <ul>
-              <li>Some</li>
-              <li>Elements</li>
-              <li>Some</li>
-              <li>Elements</li>
-            </ul>x
+              <li>
+                <a>
+                <span class="title">Index</span>
+                </a>
+                </li>
+              <li></li>
+              <li>
+                <a>
+                Connexion
+                </a>
+                </li>
+              <li>
+                <a>
+                  Aide
+                  </a>
+                </li>
+            </ul>
           </nav>
           <div style={{marginTop: "1rem", display: "grid", gridGap: '1rem', gridTemplateColumns: "repeat(6, 1fr)", width: "100%"}}>
             <Box style={{gridColumnStart: 1, gridColumnEnd: 3}}>1</Box>
