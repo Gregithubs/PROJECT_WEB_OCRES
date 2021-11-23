@@ -21,8 +21,8 @@ const SummaryCard = ({currencyData}) => {
                 <img src={logo_url} alt="" width={30} height={30}/>
                 <p>{symbol} / {name}</p>
             </div>
-            <p>$ {priceFormatted}</p>
-            <p>{price_change_pct}%</p>
+            <p>Price : $ {priceFormatted}</p>
+            <p>Evolution : {price_change_pct}%</p>
         </div>
     )
 }

@@ -9,7 +9,7 @@ render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Homepage />} />
-      {/* Ajouter des Route (pages) en plus pour utiliser la navigation react router */}
+      {/* Ajouter des Routes (pages) en plus pour utiliser la navigation react router */}
       {/* https://reactrouter.com/docs/en/v6/getting-started/tutorial */}
     </Routes>
   </BrowserRouter>,
