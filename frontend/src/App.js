@@ -19,10 +19,10 @@ function App() {
         <main className = "Main">
           <nav className = "Menu">
             <ul>
-              <li><a><span class="Title">Home</span></a></li>
-              <li><a>User</a></li>
-              <li><a>News</a></li>
-              <li><a>Informations</a></li>
+              <li><a href="#"><span class="Title">Home</span></a></li>
+              <li><a href="#">User</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Informations</a></li>
             </ul>
           </nav>
           <div className = "Widget">

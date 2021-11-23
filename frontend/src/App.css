@@ -68,3 +68,8 @@
   grid-template-columns: repeat(6, 1fr); 
   width: 80%;
 }
+
+.Total ul :hover
+{
+  background: #ffffff52;
+}
