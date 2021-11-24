@@ -17,6 +17,8 @@ const Homepage = () => {
       .then((res) => {
         const items = res.data;
         setDataApi(items);
+        console.log(items[0])
+
       })
     axios.get("https://coinranking1.p.rapidapi.com/stats", {
       headers: {
@@ -29,9 +31,8 @@ const Homepage = () => {
         setDataApi2(items);
         console.log(items)
       })
-    
-  }, []);
 
+  }, []);
   return (
     <Layout>
       <main className="widgets">
@@ -60,28 +61,28 @@ const Homepage = () => {
           )
         }
       </main>
-      <nav className = "total">
-            <ul>
-              <a>Total <br/>Cryptocurrencies</a><br/>
-              <a></a>
-              {dataApi2?millify(dataApi2.totalCoins):null}
-              <br/><br/>
-              <a>Total Exchanges</a><br/>
-              <a></a>
-              {dataApi2?millify(dataApi2.totalExchanges):null}
-              <br/><br/>
-              <a>Total Market Cap</a><br/>
-              <a></a>
-              {dataApi2?`$ ${millify(dataApi2.totalMarketCap)}`:null}
-              <br/><br/>  
+      <nav className="total">
+        <ul>
+          <a>Total <br />Cryptocurrencies</a><br />
+          <a></a>
+          {dataApi2 ? millify(dataApi2.totalCoins) : null}
+          <br /><br />
+          <a>Total Exchanges</a><br />
+          <a></a>
+          {dataApi2 ? millify(dataApi2.totalExchanges) : null}
+          <br /><br />
+          <a>Total Market Cap</a><br />
+          <a></a>
+          {dataApi2 ? `$ ${millify(dataApi2.totalMarketCap)}` : null}
+          <br /><br />
 
-              <a>Total 24h Volume</a><br/>
-              <a></a>
-              {dataApi2?`$ ${millify(dataApi2.total24hVolume)}`:null}
-              <br/><br/>
+          <a>Total 24h Volume</a><br />
+          <a></a>
+          {dataApi2 ? `$ ${millify(dataApi2.total24hVolume)}` : null}
+          <br /><br />
 
-            </ul>
-          </nav>
+        </ul>
+      </nav>
     </Layout>
   )
 }
