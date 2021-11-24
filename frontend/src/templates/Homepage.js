@@ -18,14 +18,12 @@ const Homepage = () => {
       })
   }, []);
 
-
   return (
     <Layout>
-
-      <main style={{ display: "flex", flexDirection: "column", gap: "1rem", maxWidth: "800px", justifyContent: "center" }}>
+      <main className="widgets">
         {dataApi &&
           (
-            <div style={{ display: "flex", gap: "1rem" }}>
+            <div className="row1">
               <SummaryCard currencyData={dataApi[0]} />
               <SummaryCard currencyData={dataApi[0]} />
               <SummaryCard currencyData={dataApi[0]} />
@@ -34,7 +32,7 @@ const Homepage = () => {
         }
         {dataApi &&
           (
-            <div style={{ display: "flex", width: "100%", justifyContent: "center", gap: "1rem" }}>
+            <div className="row2">
               <SummaryCard currencyData={dataApi[0]} />
               <SummaryCard currencyData={dataApi[0]} />
             </div>
@@ -42,12 +40,27 @@ const Homepage = () => {
         }
         {dataApi &&
           (
-            <div style={{ display: "flex", width: "100%", justifyContent: "center", gap: "1rem" }}>
+            <div className="row3">
               <SummaryCard currencyData={dataApi[0]} />
             </div>
           )
         }
       </main>
+      <nav className = "total">
+            <ul>
+              <a>Total <br/>Cryptocurrencies</a><br/>
+              <a></a><br/><br/>
+
+              <a>Total Exchanges</a><br/>
+              <a></a><br/><br/>
+
+              <a>Total Market Cap</a><br/>
+              <a></a><br/><br/>
+
+              <a>Total 24h Volume</a><br/>
+              <a></a><br/><br/>
+            </ul>
+          </nav>
     </Layout>
   )
 }

@@ -6,12 +6,13 @@
     font-size: calc(10px + 2vmin);
     color: white;
   }
+   
   * {
   margin:0;
   padding:0;
   font-family:"Poppins", sans-serif;
   box-sizing: border-box;
-}
+  }
   
   .app-link {
     color: #09d3ac;
@@ -28,18 +29,24 @@
   }
   
   .main {
-    display: flex; 
+    display: flex;
     gap: 1rem; 
     height: 100%;
   }
   
   .menu {
     line-height : 3;
-    background-color: #2c2828,;
+    background-color: #2c2828;
     color: #c7950c; 
     max-width: 195px;
   }
   
+  .header{
+    background-color: #a1a1a1;
+    display: flex;
+    justify-content: center;
+  }
+
   .total {
     margin-top: 1rem;
     font-size: 20px;
@@ -59,4 +66,38 @@
   .total ul :hover
   {
     background: #ffffff52;
+  }
+
+  .left {
+    display: flex; 
+    justify-content: center; 
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .widgets{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 800px;
+    justify-content: center;
+  }
+
+  .row1{
+    display: flex;
+    gap: 1rem;
+  }
+
+  .row2{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .row3{
+    display: flex; 
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
   }

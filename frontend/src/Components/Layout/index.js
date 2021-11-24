@@ -7,10 +7,17 @@ export default function Layout(props) {
 
     return (
         <div className="app-header">
-            <header>Ceci est le header</header>
+            <header className="header">Ceci est le header</header>
             <div className="main">
-                <aside className="menu">Ceci est la barre de côté</aside>
-                <main style={{display: "flex", justifyContent: "center", width: "100%", padding: "2rem"}}>
+                <aside className="menu">
+                    <ul>
+                        <li><a href="#"><span class="Title">Home</span></a></li>
+                        <li><a href="#">User</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Informations</a></li>
+                    </ul>
+                </aside>
+                <main className="left">
                     {props.children}
                 </main>
             </div>
