@@ -1,12 +1,16 @@
 .app-header {
     background-color: #000000;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    color: #c7950c; 
   }
    
+a {
+  color: #c7950c;
+  text-decoration: none;
+}
+
   * {
   margin:0;
   padding:0;
@@ -24,7 +28,7 @@
   }
   
   .title {
-    background-color: #2c2828;
+    background-color: #2b2929;
     color: #c7950c;
   }
   
@@ -36,19 +40,25 @@
   
   .menu {
     line-height : 3;
-    background-color: #2c2828;
+    font-size: 25px;
+    padding: 1rem 2rem;
+    list-style: none;
+    background-color: #2b2929;
     color: #c7950c; 
     max-width: 195px;
+    height: 100%;
   }
   
   .header{
-    background-color: #a1a1a1;
+    background-color: #2b2929;
     display: flex;
+    font-size: 35px;
     justify-content: center;
   }
 
   .total {
-    margin-top: 1rem;
+    margin-top: 3rem;
+    margin-left: 5rem;
     font-size: 20px;
     background-color: #2c2828,;
     color: #c7950c; 
@@ -61,11 +71,6 @@
     grid-gap: 1rem;
     grid-template-columns: repeat(6, 1fr); 
     width: 80%;
-  }
-  
-  .total ul :hover
-  {
-    background: #ffffff52;
   }
 
   .left {
@@ -101,3 +106,5 @@
     justify-content: center;
     gap: 1rem;
   }
+
+  

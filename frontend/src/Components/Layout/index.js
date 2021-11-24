@@ -7,11 +7,11 @@ export default function Layout(props) {
 
     return (
         <div className="app-header">
-            <header className="header">Ceci est le header</header>
+            <header className="header">Crypto Web</header>
             <div className="main">
-                <aside className="menu">
-                    <ul>
-                        <li><a href="#"><span class="Title">Home</span></a></li>
+                <aside>
+                    <ul className="menu">
+                        <li><a href="#"><span className="Title">Home</span></a></li>
                         <li><a href="#">User</a></li>
                         <li><a href="#">News</a></li>
                         <li><a href="#">Informations</a></li>

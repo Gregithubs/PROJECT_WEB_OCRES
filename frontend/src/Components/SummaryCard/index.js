@@ -13,7 +13,6 @@ const SummaryCard = ({currencyData}) => {
     const {price_change_pct} = R.pathOr(null, ['1d'], currencyData)
     const priceFormatted = (Math.round(price * 100) / 100).toFixed(2)
 
-    console.log(currencyData)
 
     return (
         <div className="container">
