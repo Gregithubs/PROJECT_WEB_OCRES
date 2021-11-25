@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.24.0",
+    "history": "^5.1.0",
     "millify": "^4.0.0",
     "ramda": "^0.27.1",
     "react": "^16.11.0",

@@ -1,5 +1,6 @@
 import { props } from 'ramda'
 import React from 'react'
+import { Link } from "react-router-dom";
 
 import "./index.css"
 
@@ -11,10 +12,10 @@ export default function Layout(props) {
             <div className="main">
                 <aside>
                     <ul className="menu">
-                        <li><a href="#"><span className="Title">Home</span></a></li>
-                        <li><a href="#">User</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Informations</a></li>
+                        <li><Link to="/"><span className="Title">Home</span></Link></li>
+                        <li><Link to="/user">User</Link></li>
+                        <li><Link to="/news">News</Link></li>
+                        <li><Link to="/informations">Informations</Link></li>
                     </ul>
                 </aside>
                 <main className="left">
