@@ -13,7 +13,7 @@ const Homepage = () => {
   const [dataApi2, setDataApi2] = useState(null)
 
   useEffect(() => {
-    axios.get(`https://api.nomics.com/v1/currencies/ticker?key=${apiKey}&ids=BTC,ETH,PSG&interval=1d,30d&convert=EUR&per-page=100&page=1`)
+    axios.get(`https://api.nomics.com/v1/currencies/ticker?key=${apiKey}&ids=BTC,ETH,BNB,NEXO,NEO,HEX&interval=1d,30d&convert=EUR&per-page=100&page=1`)
       .then((res) => {
         const items = res.data;
         setDataApi(items);
@@ -22,7 +22,7 @@ const Homepage = () => {
     axios.get("https://coinranking1.p.rapidapi.com/stats", {
       headers: {
         'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
-        'x-rapidapi-key': 'c75bfb7a18msh8c51fe9e891ca40p104a36jsnfb1c942a4971'
+        'x-rapidapi-key': 'KJwZZIJSFimshuivMSVGaiYzkRomp15f2vKjsnK4bKzuUzVLzA'
       }
     })
       .then((res) => {
@@ -45,9 +45,10 @@ const Homepage = () => {
         }
         {dataApi &&
           (
-            <div className="row2">
-              <SummaryCard currencyData={dataApi[0]} />
-              <SummaryCard currencyData={dataApi[0]} />
+            <div className="row1">
+              <SummaryCard currencyData={dataApi[3]} />
+              <SummaryCard currencyData={dataApi[4]} />
+              <SummaryCard currencyData={dataApi[5]} />
             </div>
           )
         }
@@ -69,6 +70,12 @@ const Homepage = () => {
           <a></a>
           {dataApi2 ? millify(dataApi2.totalExchanges) : null}
           <br /><br />
+
+          <a>Total Market</a><br />
+          <a></a>
+          {dataApi2 ? `$ ${millify(dataApi2.totalMarkets)}` : null}
+          <br /><br />
+
           <a>Total Market Cap</a><br />
           <a></a>
           {dataApi2 ? `$ ${millify(dataApi2.totalMarketCap)}` : null}
@@ -78,7 +85,6 @@ const Homepage = () => {
           <a></a>
           {dataApi2 ? `$ ${millify(dataApi2.total24hVolume)}` : null}
           <br /><br />
-
         </ul>
       </nav>
     </Layout>
