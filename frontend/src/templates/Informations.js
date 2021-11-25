@@ -1,21 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import axios from "axios"
+import React from 'react';
 import Layout from "../Components/Layout"
 
-
-import { apiKey } from "../api/nomicsApi"
-
 const Informations = () => {
-  const [dataApi, setDataApi] = useState(null)
-
-  useEffect(() => {
-    axios.get(`https://api.nomics.com/v1/currencies/ticker?key=${apiKey}&ids=BTC,ETH,XRP&interval=1d,30d&convert=EUR&per-page=100&page=1`)
-      .then((res) => {
-        const items = res.data;
-        setDataApi(items);
-      })
-
-  }, []);
   return (
         <Layout>
             <textearea className="about">
