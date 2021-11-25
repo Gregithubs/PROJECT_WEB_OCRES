@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios"
-import millify from "millify"
 
 import SummaryCard from "../Components/SummaryCard"
 import Layout from "../Components/Layout"
@@ -45,7 +44,8 @@ const News = () => {
         }
         {dataApi &&
           (
-            <div className="row2">
+            <div className="row1">
+              <SummaryCard currencyData={dataApi[0]} />
               <SummaryCard currencyData={dataApi[0]} />
               <SummaryCard currencyData={dataApi[0]} />
             </div>
@@ -53,34 +53,15 @@ const News = () => {
         }
         {dataApi &&
           (
-            <div className="row3">
+            <div className="row1">
+              <SummaryCard currencyData={dataApi[0]} />
+              <SummaryCard currencyData={dataApi[0]} />
               <SummaryCard currencyData={dataApi[0]} />
             </div>
           )
         }
+        
       </main>
-      <nav className="total">
-        <ul>
-          <a>Total <br />Cryptocurrencies</a><br />
-          <a></a>
-          {dataApi2 ? millify(dataApi2.totalCoins) : null}
-          <br /><br />
-          <a>Total Exchanges</a><br />
-          <a></a>
-          {dataApi2 ? millify(dataApi2.totalExchanges) : null}
-          <br /><br />
-          <a>Total Market Cap</a><br />
-          <a></a>
-          {dataApi2 ? `$ ${millify(dataApi2.totalMarketCap)}` : null}
-          <br /><br />
-
-          <a>Total 24h Volume</a><br />
-          <a></a>
-          {dataApi2 ? `$ ${millify(dataApi2.total24hVolume)}` : null}
-          <br /><br />
-
-        </ul>
-      </nav>
     </Layout>
   )
 }

@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios"
-import millify from "millify"
-
-import SummaryCard from "../Components/SummaryCard"
 import Layout from "../Components/Layout"
 
 
@@ -10,7 +7,6 @@ import { apiKey } from "../api/nomicsApi"
 
 const Informations = () => {
   const [dataApi, setDataApi] = useState(null)
-  const [dataApi2, setDataApi2] = useState(null)
 
   useEffect(() => {
     axios.get(`https://api.nomics.com/v1/currencies/ticker?key=${apiKey}&ids=BTC,ETH,XRP&interval=1d,30d&convert=EUR&per-page=100&page=1`)
@@ -18,70 +14,34 @@ const Informations = () => {
         const items = res.data;
         setDataApi(items);
       })
-      
-    axios.get("https://coinranking1.p.rapidapi.com/stats", {
-      headers: {
-        'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
-        'x-rapidapi-key': 'c75bfb7a18msh8c51fe9e891ca40p104a36jsnfb1c942a4971'
-      }
-    })
-      .then((res) => {
-        const items = res.data.data;
-        setDataApi2(items);
-      })
 
   }, []);
   return (
-    <Layout>
-      <main className="widgets">
-        {dataApi &&
-          (
-            <div className="row1">
-              <SummaryCard currencyData={dataApi[0]} />
-              <SummaryCard currencyData={dataApi[0]} />
-              <SummaryCard currencyData={dataApi[0]} />
-            </div>
-          )
-        }
-        {dataApi &&
-          (
-            <div className="row2">
-              <SummaryCard currencyData={dataApi[0]} />
-              <SummaryCard currencyData={dataApi[0]} />
-            </div>
-          )
-        }
-        {dataApi &&
-          (
-            <div className="row3">
-              <SummaryCard currencyData={dataApi[0]} />
-            </div>
-          )
-        }
-      </main>
-      <nav className="total">
-        <ul>
-          <a>Total <br />Cryptocurrencies</a><br />
-          <a></a>
-          {dataApi2 ? millify(dataApi2.totalCoins) : null}
-          <br /><br />
-          <a>Total Exchanges</a><br />
-          <a></a>
-          {dataApi2 ? millify(dataApi2.totalExchanges) : null}
-          <br /><br />
-          <a>Total Market Cap</a><br />
-          <a></a>
-          {dataApi2 ? `$ ${millify(dataApi2.totalMarketCap)}` : null}
-          <br /><br />
+        <Layout>
+            <textearea className="about">
+                <h1>Qui sommes-nous?</h1><br />
+            Nous sommes ECE Crypto, une société de génération de leads et 
+            de marketing d’affiliation opérant dans une pléthore de secteurs verticaux de grande valeur basée à Paris.<br /><br />
+            
+            <h1>Adresse</h1><br />
+            ECE Crypto<br />
+            Company number: 000001<br />
+            37 Quai de Grenelle<br />
+            75015<br />
+            Paris<br />
+            France<br /><br />
 
-          <a>Total 24h Volume</a><br />
-          <a></a>
-          {dataApi2 ? `$ ${millify(dataApi2.total24hVolume)}` : null}
-          <br /><br />
+            <h1>Numéro de téléphone</h1><br />
+            +33 6 00 00 00 01<br /><br />
 
-        </ul>
-      </nav>
-    </Layout>
+            <h1>Adresse mail</h1><br />
+            ece.crypto@gmail.com<br />
+            </textearea>
+
+            <textearea className="merci">
+            Ce site a été fait avec amour par Biron Emilien et Pateyron Grégoire !
+            </textearea>
+        </Layout>
   )
 }
 

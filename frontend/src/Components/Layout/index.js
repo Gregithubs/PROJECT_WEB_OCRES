@@ -8,14 +8,14 @@ export default function Layout(props) {
 
     return (
         <div className="app-header">
-            <header className="header">Crypto Web</header>
+            <header className="header">ECE Crypto</header>
             <div className="main">
                 <aside>
                     <ul className="menu">
                         <li><Link to="/"><span className="Title">Home</span></Link></li>
                         <li><Link to="/user">User</Link></li>
                         <li><Link to="/news">News</Link></li>
-                        <li><Link to="/informations">Informations</Link></li>
+                        <li><Link to="/informations">About</Link></li>
                     </ul>
                 </aside>
                 <main className="left">
