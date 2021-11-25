@@ -9,6 +9,9 @@ render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Homepage />} />
+      <Route path="/user" element={<User />} />
+      <Route path="/news" element={<News />} />
+      <Route path="/informations" element={<Informations />} />
       {/* Ajouter des Routes (pages) en plus pour utiliser la navigation react router */}
       {/* https://reactrouter.com/docs/en/v6/getting-started/tutorial */}
     </Routes>
