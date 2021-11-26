@@ -12,7 +12,7 @@ const Homepage = () => {
   const [dataApi2, setDataApi2] = useState(null)
 
   useEffect(() => {
-    axios.get(`https://api.nomics.com/v1/currencies/ticker?key=${apiKey}&ids=BTC,SOL,BNB,XTZ,NEO,ICP&interval=1d,30d&convert=EUR&per-page=100&page=1`)
+    axios.get(`https://api.nomics.com/v1/currencies/ticker?key=${apiKey}&ids=BTC,SOL,BNB,ZEC,NEO,ICP&interval=1d,30d&convert=EUR&per-page=100&page=1`)
       .then((res) => {
         const items = res.data;
         setDataApi(items);
