@@ -1,10 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from "../Components/Layout"
 import axios from "axios"
 import millify from "millify"
-
+import { apiKey } from "../api/nomicsApi"
+import SummaryCard from "../Components/SummaryCard"
 var image=require('./jeandidier.jpg')
 const User = () => {
+  const [dataApi, setDataApi] = useState(null)
+  const [dataApi2, setDataApi2] = useState(null)
+  useEffect(() => {
+    axios.get(`https://api.nomics.com/v1/currencies/ticker?key=${apiKey}&ids=BTC,ETH,BNB,NEXO,NEO,HEX&interval=1d,30d&convert=EUR&per-page=100&page=1`)
+      .then((res) => {
+        const items = res.data;
+        setDataApi(items);
+      })
+
+    axios.get("https://coinranking1.p.rapidapi.com/stats", {
+      headers: {
+        'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
+        'x-rapidapi-key': 'KJwZZIJSFimshuivMSVGaiYzkRomp15f2vKjsnK4bKzuUzVLzA'
+      }
+    })
+      .then((res) => {
+        const items = res.data.data;
+        setDataApi2(items);
+      })
+
+  }, []);
   return (
         <Layout>
             <textearea className="about-user">
