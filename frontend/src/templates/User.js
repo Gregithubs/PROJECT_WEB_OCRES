@@ -44,7 +44,7 @@ const User = () => {
             </textearea>
 
             <textearea className="amis">
-            Vos Amis :
+            Vos Relations :
             </textearea>
         </Layout>
   )
