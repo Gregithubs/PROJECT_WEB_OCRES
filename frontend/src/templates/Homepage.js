@@ -54,7 +54,7 @@ const Homepage = () => {
         }
         {dataApi &&
           (
-            <div className="row3">
+            <div className="row2">
               <SummaryCard currencyData={dataApi[0]} />
             </div>
           )

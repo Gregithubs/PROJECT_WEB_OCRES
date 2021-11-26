@@ -101,13 +101,6 @@ a {
     gap: 1rem;
   }
 
-  .row3 {
-    display: flex; 
-    width: 100%;
-    justify-content: center;
-    gap: 1rem;
-  }
-
   .about {
     font-size: 20px;
     color: #ffbb00; 
