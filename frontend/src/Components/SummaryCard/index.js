@@ -7,13 +7,16 @@ const SummaryCard = ({ currencyData = {
     name: "",
     symbol: "",
     price: "",
-    logo_url: ""
+    logo_url: "",
 } }) => {
     const {
         name,
         symbol,
         price,
         logo_url,
+        rank,
+        max_supply,
+        num_exchanges,
     } = currencyData
     if (name === "") {
         return (<div className="container">
@@ -21,8 +24,6 @@ const SummaryCard = ({ currencyData = {
                 <img src={logo_url} alt="" width={30} height={30} />
                 <p>{symbol} / {name}</p>
             </div>
-            <p>Price : $ </p>
-            <p>Evolution : %</p>
         </div>)
     }
 
@@ -35,9 +36,14 @@ const SummaryCard = ({ currencyData = {
                 <img src={logo_url} alt="" width={30} height={30} />
                 <p>{symbol} / {name}</p>
             </div>
-            <p>Price : $ {priceFormatted}</p>
-            <p>Evolution : {price_change_pct}%</p>
-            <p></p>
+            <div className="info-container">
+                <p>Price : $ {priceFormatted}</p>
+                <p>Evolution: {price_change_pct}%</p>
+                <p>Exchanges : {num_exchanges}</p>
+                <p>Max Supply : {max_supply}</p>
+                <p>Rank : {rank}</p>
+            </div>
+            
         </div>
     )
 }

@@ -20,6 +20,11 @@
   padding-left: 15px;
 }
 
+.info-container {
+  line-height: 1.6;
+  padding-left: 15px;
+}
+
 p {
   color: white;
   font-size: large;

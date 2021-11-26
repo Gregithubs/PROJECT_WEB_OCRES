@@ -42,7 +42,7 @@ const obj = {
   "30d": {
       "volume": "1190989131083.84",
       "price_change": "-4699.92413865",
-      "price_change_pct": "-0.0864",
+      "price_change_pct1": "-0.0864",
       "volume_change": "-118783569103.36",
       "volume_change_pct": "-0.0907",
       "market_cap_change": "-87217339026.97",
