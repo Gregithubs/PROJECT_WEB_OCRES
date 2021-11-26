@@ -122,3 +122,19 @@ a {
     right:10px;
     bottom:10px;
   }
+  .amis {
+    font-size: 20px;
+    color: #ffbb00; 
+    text-align:right;
+    position:sticky;
+    right:70px;
+    top:10px;
+  }
+.jeandidier{
+  margin-left:20px;
+  margin-top:10px;
+  width:8%;
+  height:10%;
+  text-align:center;
+  
+}
