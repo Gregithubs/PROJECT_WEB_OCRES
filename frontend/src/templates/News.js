@@ -3,6 +3,7 @@ import axios from "axios"
 
 import SummaryCard from "../Components/SummaryCard"
 import Layout from "../Components/Layout"
+import SummaryNews from '../stories/2-SummaryNews';
 
 const News = () => {
   const [dataApi, setDataApi] = useState(null)
@@ -27,18 +28,18 @@ const News = () => {
         {dataApi &&
           (
             <div className="row1">
-              <SummaryCard currencyData={dataApi[0]} />
-              <SummaryCard currencyData={dataApi[0]} />
-              <SummaryCard currencyData={dataApi[0]} />
+              <SummaryNews currencyData={dataApi[0]} />
+              <SummaryNews currencyData={dataApi[0]} />
+              <SummaryNews currencyData={dataApi[0]} />
             </div>
           )
         }
         {dataApi &&
           (
             <div className="row1">
-              <SummaryCard currencyData={dataApi[0]} />
-              <SummaryCard currencyData={dataApi[0]} />
-              <SummaryCard currencyData={dataApi[0]} />
+              <SummaryNews currencyData={dataApi[0]} />
+              <SummaryNews currencyData={dataApi[0]} />
+              <SummaryNews currencyData={dataApi[0]} />
             </div>
           )
         }

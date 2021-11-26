@@ -5,7 +5,6 @@ import millify from "millify"
 import SummaryCard from "../Components/SummaryCard"
 import Layout from "../Components/Layout"
 
-
 import { apiKey } from "../api/nomicsApi"
 
 const Homepage = () => {
@@ -70,17 +69,14 @@ const Homepage = () => {
           <a></a>
           {dataApi2 ? millify(dataApi2.totalExchanges) : null}
           <br /><br />
-
           <a>Total Market</a><br />
           <a></a>
           {dataApi2 ? `$ ${millify(dataApi2.totalMarkets)}` : null}
           <br /><br />
-
           <a>Total Market Cap</a><br />
           <a></a>
           {dataApi2 ? `$ ${millify(dataApi2.totalMarketCap)}` : null}
           <br /><br />
-
           <a>Total 24h Volume</a><br />
           <a></a>
           {dataApi2 ? `$ ${millify(dataApi2.total24hVolume)}` : null}

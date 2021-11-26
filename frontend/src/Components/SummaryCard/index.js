@@ -37,6 +37,7 @@ const SummaryCard = ({ currencyData = {
             </div>
             <p>Price : $ {priceFormatted}</p>
             <p>Evolution : {price_change_pct}%</p>
+            <p></p>
         </div>
     )
 }
