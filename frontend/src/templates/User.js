@@ -37,7 +37,7 @@ const User = () => {
            <img class="jeandidier" src={image} alt="la tête de jean-didier notre meilleur client" /> <br />
             Homme <br />
             36 ans <br />
-            Vis à : Paris, France<br />
+            Vit à : Paris, France<br />
             Célibataire<br />
             +33 7 99 99 99 91<br /><br />
             jeandidieradorelacryptomonnaie@gmail.com<br />

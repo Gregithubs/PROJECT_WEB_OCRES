@@ -11,7 +11,7 @@ const Informations = () => {
             
             <h1>Adresse</h1><br />
             ECE Crypto<br />
-            Company number: 000001<br />
+            Company number : 000001<br />
             37 Quai de Grenelle<br />
             75015<br />
             Paris<br />
