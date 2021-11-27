@@ -61,17 +61,8 @@ a {
     margin-top: 3rem;
     margin-left: 5rem;
     font-size: 20px;
-    background-color: #2c2828,;
     color: #ffbb00; 
     max-width: 195px;
-  }
-  
-  .widget {
-    margin-top: 1rem;
-    display:grid; 
-    grid-gap: 1rem;
-    grid-template-columns: repeat(6, 1fr); 
-    width: 80%;
   }
 
   .left {
@@ -115,6 +106,7 @@ a {
     right:10px;
     bottom:10px;
   }
+
   .amis {
     font-size: 20px;
     color: #ffbb00; 
@@ -123,19 +115,22 @@ a {
     right:70px;
     top:10px;
   }
-.jeandidier{
+  
+  .jeandidier{
   margin-left:20px;
   margin-top:10px;
   width:8%;
   height:10%;
   text-align:center;
   
-}
-.about-user {
+  }
+
+  .about-user {
   font-family:"Poppins",sans-serif;
   font-size: 20px;
   color: #ffbb00; 
   height: 100%;
+<<<<<<< HEAD
 }
 /*big-screen.styles.css*/
 
@@ -159,3 +154,6 @@ a {
   padding-top: 2%;
 }
 
+=======
+  }
+>>>>>>> 1576405d8bc08dce12572fd6a830896fb0572b4e

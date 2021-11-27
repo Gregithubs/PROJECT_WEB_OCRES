@@ -22,7 +22,14 @@ const SummaryCard = ({ currencyData = {
         return (<div className="container">
             <div className="title-container">
                 <img src={logo_url} alt="" width={30} height={30} />
-                <p>{symbol} / {name}</p>
+                <p>Symbol / Name</p>
+            </div>
+            <div className="info-container">
+                <p>Price : $</p>
+                <p>Evolution : %</p>
+                <p>Exchanges : </p>
+                <p>Max Supply : </p>
+                <p>Rank : </p>
             </div>
         </div>)
     }
@@ -38,7 +45,7 @@ const SummaryCard = ({ currencyData = {
             </div>
             <div className="info-container">
                 <p>Price : $ {priceFormatted}</p>
-                <p>Evolution: {price_change_pct}%</p>
+                <p>Evolution : {price_change_pct}%</p>
                 <p>Exchanges : {num_exchanges}</p>
                 <p>Max Supply : {max_supply}</p>
                 <p>Rank : {rank}</p>
