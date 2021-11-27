@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios"
-
-import SummaryCard from "../Components/SummaryCard"
 import Layout from "../Components/Layout"
 
 const News = () => {

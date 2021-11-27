@@ -130,26 +130,26 @@ a {
   font-size: 20px;
   color: #ffbb00; 
   height: 100%;
-}
-/*big-screen.styles.css*/
+  }
 
-.big-screen {
-  width: 600px;
-  height: 100px;
-  background: #7c52bf;
-  margin: 0 auto;  
-}
-.big-screen p {
-  padding-top: 2%;
-}
+  .big-screen {
+    width: 600px;
+    height: 100px;
+    background: #7c52bf;
+    margin: 0 auto;  
+  }
+  
+  .big-screen p {
+    padding-top: 2%;
+  }
 
-.desktop {
-  width: 400px;
-  height: 100px;
-  background: #b097d8;
-  margin: 0 auto;
-}
-.desktop p {
-  padding-top: 2%;
-}
+  .desktop {
+    width: 400px;
+    height: 100px;
+    background: #b097d8;
+    margin: 0 auto;
+  }
+  .desktop p {
+    padding-top: 2%;
+  }
 
