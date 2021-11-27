@@ -24,6 +24,13 @@ const SummaryCard = ({ currencyData = {
                 <img src={logo_url} alt="" width={30} height={30} />
                 <p>{symbol} / {name}</p>
             </div>
+            <div className="info-container">
+                <p>Price : $</p>
+                <p>Evolution: %</p>
+                <p>Exchanges : </p>
+                <p>Max Supply : </p>
+                <p>Rank : </p>
+                </div>
         </div>)
     }
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions';
 import SummaryCard from '../Components/SummaryCard';
 
 export default {

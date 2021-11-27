@@ -115,6 +115,7 @@ a {
     right:10px;
     bottom:10px;
   }
+
   .amis {
     font-size: 20px;
     color: #ffbb00; 
@@ -123,17 +124,19 @@ a {
     right:70px;
     top:10px;
   }
-.jeandidier{
+  
+  .jeandidier{
   margin-left:20px;
   margin-top:10px;
   width:8%;
   height:10%;
   text-align:center;
   
-}
-.about-user {
+  }
+
+  .about-user {
   font-family:"Poppins",sans-serif;
   font-size: 20px;
   color: #ffbb00; 
   height: 100%;
-}
+  }
