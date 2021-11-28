@@ -96,6 +96,7 @@ a {
     font-size: 20px;
     color: #ffbb00; 
     height: 100%;
+    line-height: 1.75rem;
   }
   
   .merci {
@@ -113,6 +114,7 @@ a {
     margin-top: 3rem;
     margin-right: 5rem;
     max-width: 195px;
+    line-height: 2.5rem;
   }
 
   .infos-profil {

@@ -24,13 +24,13 @@ const User = () => {
             </textearea>
 
             <textearea className="amis">
-            Vos Relations:<br /><br /><br />
-            - Jean Crypto <br /><br />
-            - Candy Tu <br /><br />
-            - Alain Verse <br /><br />
-            - Barack Afritt <br /><br />
-            - Yves Héron <br /><br />
-            - Élise Émoi <br /><br />
+            Vos Relations:<br /><br />
+            - Jean Crypto <br />
+            - Candy Tu <br />
+            - Alain Verse <br />
+            - Barack Afritt <br />
+            - Yves Héron <br />
+            - Élise Émoi <br />
             </textearea>
         </Layout>
   )
