@@ -101,7 +101,7 @@ const Homepage = () => {
              <LineChart
                width={500}
                height={300}
-               data={dataApi}
+               data={dataApi.price}
                margin={{
                  top: 5,
                  right: 30,
@@ -111,7 +111,7 @@ const Homepage = () => {
              >
                <CartesianGrid strokeDasharray="3 3" />
                <XAxis dataKey="time" />
-               <YAxis dataKey={dataApi[0]} />
+               <YAxis dataKey= "price" />
                <Tooltip />
                <Legend />
                <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
