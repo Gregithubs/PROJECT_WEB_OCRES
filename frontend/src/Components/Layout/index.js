@@ -13,7 +13,7 @@ export default function Layout(props) {
                 <aside>
                     <ul className="menu">
                         <li><Link to="/"><span className="Title">Home</span></Link></li>
-                        <li><Link to="/user">User</Link></li>
+                        <li><Link to="/user">Profil</Link></li>
                         <li><Link to="/news">News</Link></li>
                         <li><Link to="/informations">About</Link></li>
                     </ul>
