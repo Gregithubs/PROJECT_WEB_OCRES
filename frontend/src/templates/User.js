@@ -16,9 +16,9 @@ const User = () => {
               Nom : Jean-Didier CryptoTrader <br />
               Sexe : Homme <br />
               Age : 36 ans <br />
-              Localisation : Paris, France<br />
-              Status : Célibataire<br />
-              Numéro de téléphone : +33 7 99 99 99 91<br />
+              Localisation : Paris, France <br />
+              Status : Célibataire <br />
+              Numéro de téléphone : +33 7 99 99 99 91 <br />
               E-mail : jeandidieradorelacryptomonnaie@gmail.com
             </div>
             </textearea>
