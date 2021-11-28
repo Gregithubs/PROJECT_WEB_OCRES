@@ -11,7 +11,7 @@ const User = () => {
             Bienvenue sur votre Profil ! Ici vous pourrez voir votre portefeuille et son évolution. <br />
             Vous pourrez aussi aller regarder le portefeuilles de vos amis et voir si leurs investissements se portent bien!<br /><br />
             <h1>Infos</h1>
-            <img class="jeandidier" src={image} alt="la tête de jean-didier notre meilleur client" /> <br /> <br />
+            <img class="jeandidier" src={image} alt="" /> <br /> <br />
             <div className="infos-profil">
               Nom : Jean-Didier CryptoTrader <br />
               Sexe : Homme <br />
