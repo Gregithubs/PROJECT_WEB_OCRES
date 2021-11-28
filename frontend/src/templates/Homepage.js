@@ -1,4 +1,4 @@
-import React, { useEffect, useState, PureComponent } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from "axios"
 import millify from "millify"
 
@@ -8,54 +8,11 @@ import Layout from "../Components/Layout"
 import { apiKey } from "../api/nomicsApi"
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-const data = [
-  {
-    name: 'Mon',
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: 'Tue',
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: 'Wed',
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: 'Thur',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: 'Fri',
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: 'Sat',
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: 'Sun',
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-];
 const Homepage = () => {
   const [dataApi, setDataApi] = useState(null)
   const [dataApi2, setDataApi2] = useState(null)
-
+  const [dataApi3, setDataApi3] = useState(null)
+  const [dataApi4, setDataApi4] = useState(null)
   useEffect(() => {
     axios.get(`https://api.nomics.com/v1/currencies/ticker?key=${apiKey}&ids=BTC,SOL,BNB,ZEC,NEO,ICP&interval=1d,30d&convert=EUR&per-page=100&page=1`)
       .then((res) => {
@@ -74,7 +31,40 @@ const Homepage = () => {
         setDataApi2(items);
       })
 
+      axios.get("https://coinranking1.p.rapidapi.com/coin/1/history/7d", {
+      headers: {
+        'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
+        'x-rapidapi-key': 'c75bfb7a18msh8c51fe9e891ca40p104a36jsnfb1c942a4971'
+      }
+      })
+      .then((res) => {
+        const items = res.data.data.history;
+        const items_restructured = items.map(itm => {
+            return {
+                timestamp: itm.timestamp,                
+                Price: itm.price
+        }})
+        setDataApi3(items_restructured);
+      })
+
+      axios.get("https://coinranking1.p.rapidapi.com/coin/3/history/7d", {
+      headers: {
+        'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
+        'x-rapidapi-key': 'c75bfb7a18msh8c51fe9e891ca40p104a36jsnfb1c942a4971'
+      }
+      })
+      .then((res) => {
+        const items = res.data.data.history;
+        const items_restructured = items.map(itm => {
+            return {
+                timestamp: itm.timestamp,
+                Price2: itm.price
+        }})
+        setDataApi4(items_restructured);
+      })
+
   }, []);
+
   return (
     <Layout>
       <main className="widgets">
@@ -99,23 +89,23 @@ const Homepage = () => {
         {dataApi &&
              <ResponsiveContainer width="100%" height="100%">
              <LineChart
-               width={500}
-               height={300}
-               data={dataApi.price}
-               margin={{
-                 top: 5,
-                 right: 30,
-                 left: 20,
-                 bottom: 5,
+                width={500}
+                height={300}
+                data={dataApi3 , dataApi4}
+                margin={{
+                  top: 5,
+                  right: 30,
+                  left: 30,
+                  bottom: 5,
                }}
              >
                <CartesianGrid strokeDasharray="3 3" />
-               <XAxis dataKey="time" />
-               <YAxis dataKey= "price" />
+               <XAxis dataKey="timestamp" />
+               <YAxis />
                <Tooltip />
                <Legend />
-               <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-               <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+               <Line type="monotone" dataKey="Price" stroke="#82ca9d" />
+               <Line type="monotone" dataKey="Price2" stroke="#8884d8" />
              </LineChart>
            </ResponsiveContainer>
         }
@@ -123,7 +113,7 @@ const Homepage = () => {
       <nav className="total">
         <ul>
           <a>Total <br />Cryptocurrencies</a><br />
-          <a></a>
+          <a></a>m
           {dataApi2 ? millify(dataApi2.totalCoins) : null}
           <br /><br />
           <a>Total Exchanges</a><br />
