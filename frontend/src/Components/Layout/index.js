@@ -8,7 +8,6 @@ export default function Layout(props) {
     return (
         <div className="app-header">
             <header className="header">Crypto'cres
-            
             <div className="header">
                 <button className="btn" id="walletBtn"> <Link to="/wallet">Wallet</Link> </button>
             </div>

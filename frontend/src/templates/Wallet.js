@@ -25,7 +25,7 @@ const Wallet = () => {
         {dataApi &&
           (
             <div className="row1">
-
+              
             </div>
           )
         }

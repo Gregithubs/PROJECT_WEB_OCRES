@@ -148,19 +148,21 @@ a {
     background: #b097d8;
     margin: 0 auto;
   }
+
   .desktop p {
     padding-top: 2%;
   }
-  .btn{
+
+  .btn {
     background-color: #2b2929;
     box-sizing: content-box;
     color: #ffbb00;
-    font-size:large;
+    font-size:23px;
     text-align: center;
     width : 130px; 
     height : 35px;
     border-radius : 10px;
     position:fixed;
     margin-top: 5px;
-    margin-left: 70rem;
+    margin-left: 70rem; 
   }
