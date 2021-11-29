@@ -63,10 +63,7 @@ const Homepage = () => {
       })
 
   }, []);
-  for (let i = 0; i < array1.length; i++) {
-    array3 = {timestamp, price1: array1[i].price, price2: array2[i].price}
-    console.log(array1,array2)
- }
+
   return (
     
     <Layout>
