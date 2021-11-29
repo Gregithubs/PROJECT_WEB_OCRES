@@ -1,140 +1,158 @@
-import React, { useEffect, useState } from 'react';
-import axios from "axios"
-import millify from "millify"
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import millify from "millify";
 
-import SummaryCard from "../Components/SummaryCard"
-import Layout from "../Components/Layout"
+import SummaryCard from "../Components/SummaryCard";
+import Layout from "../Components/Layout";
 
-import { apiKey } from "../api/nomicsApi"
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { apiKey } from "../api/nomicsApi";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
+
+import * as dayjs from "dayjs";
+import "dayjs/locale/fr";
+dayjs().locale("fr");
+dayjs().format();
 
 const Homepage = () => {
-  const [dataApi, setDataApi] = useState(null)
-  const [dataApi2, setDataApi2] = useState(null)
-  const [dataApi3, setDataApi3] = useState(null)
-  const [dataApi4, setDataApi4] = useState(null)
+  const [dataApi, setDataApi] = useState(null);
+  const [dataApi2, setDataApi2] = useState(null);
+  const [dataGrapĥ, setDataGraph] = useState([]);
+  const [timeInterval, setTimeInterval] = useState("7d");
   useEffect(() => {
-    axios.get(`https://api.nomics.com/v1/currencies/ticker?key=${apiKey}&ids=BTC,SOL,BNB,ZEC,NEO,ICP&interval=1d,30d&convert=EUR&per-page=100&page=1`)
+    axios
+      .get(
+        `https://api.nomics.com/v1/currencies/ticker?key=${apiKey}&ids=BTC,SOL,BNB,ZEC,NEO,ICP&interval=1d,30d&convert=EUR&per-page=100&page=1`
+      )
       .then((res) => {
         const items = res.data;
         setDataApi(items);
-      })
+      });
 
-    axios.get("https://coinranking1.p.rapidapi.com/stats", {
-      headers: {
-        'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
-        'x-rapidapi-key': 'KJwZZIJSFimshuivMSVGaiYzkRomp15f2vKjsnK4bKzuUzVLzA'
-      }
-    })
+    axios
+      .get("https://coinranking1.p.rapidapi.com/stats", {
+        headers: {
+          "x-rapidapi-host": "coinranking1.p.rapidapi.com",
+          "x-rapidapi-key":
+            "KJwZZIJSFimshuivMSVGaiYzkRomp15f2vKjsnK4bKzuUzVLzA",
+        },
+      })
       .then((res) => {
         const items = res.data.data;
         setDataApi2(items);
-      })
+      });
 
-      axios.get("https://coinranking1.p.rapidapi.com/coin/1/history/7d", {
-      headers: {
-        'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
-        'x-rapidapi-key': 'c75bfb7a18msh8c51fe9e891ca40p104a36jsnfb1c942a4971'
-      }
+    axios
+      .get("https://coinranking1.p.rapidapi.com/coin/1/history/"+timeInterval, {
+        headers: {
+          "x-rapidapi-host": "coinranking1.p.rapidapi.com",
+          "x-rapidapi-key":
+            "c75bfb7a18msh8c51fe9e891ca40p104a36jsnfb1c942a4971",
+        },
       })
       .then((res) => {
         const items = res.data.data.history;
-        const items_restructured = items.map(itm => {
-            return {
-              timestamp: itm.timestamp,                
-                Price: itm.price
-        }})
-        setDataApi3(items_restructured);
-      })
-      axios.get("https://coinranking1.p.rapidapi.com/coin/3/history/7d", {
-      headers: {
-        'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
-        'x-rapidapi-key': 'c75bfb7a18msh8c51fe9e891ca40p104a36jsnfb1c942a4971'
-      }
-      })
-      .then((res) => {
-        const items = res.data.data.history;
-        const items_restructured = items.map(itm => {
-            return {
-                timestamp: itm.timestamp,
-                Price2: itm.price
-        }})
-        setDataApi4(items_restructured);
-      })
-
-  }, []);
+        axios
+          .get("https://coinranking1.p.rapidapi.com/coin/2/history/"+timeInterval, {
+            headers: {
+              "x-rapidapi-host": "coinranking1.p.rapidapi.com",
+              "x-rapidapi-key":
+                "c75bfb7a18msh8c51fe9e891ca40p104a36jsnfb1c942a4971",
+            },
+          })
+          .then((response) => {
+            const items_2 = response.data.data.history;
+            console.log(items);
+            const data = [];
+            for (let i = 0; i < items.length; i++) {
+              const a = new Date(items[i].timestamp);
+              data.push({
+                timestamp: a.toDateString() + " " + a.toLocaleTimeString(),
+                btc: items[i].price,
+                eth: items_2[i].price,
+              });
+            }
+            setDataGraph(data);
+          });
+      });
+  }, [timeInterval]);
 
   return (
-    
     <Layout>
       <main className="widgets">
-        {dataApi &&
-          (
-            <div className="row">
-              <SummaryCard currencyData={dataApi[0]} />
-              <SummaryCard currencyData={dataApi[1]} />
-              <SummaryCard currencyData={dataApi[2]} />
-            </div>
-          )
-        }
-        {dataApi &&
-          (
-            <div className="row">
-              <SummaryCard currencyData={dataApi[3]} />
-              <SummaryCard currencyData={dataApi[4]} />
-              <SummaryCard currencyData={dataApi[5]} />
-            </div>
-          )
-        }
-        {dataApi &&
+        {dataApi && (
+          <div className="row">
+            <SummaryCard currencyData={dataApi[0]} />
+            <SummaryCard currencyData={dataApi[1]} />
+            <SummaryCard currencyData={dataApi[2]} />
+          </div>
+        )}
+        {dataApi && (
+          <div className="row">
+            <SummaryCard currencyData={dataApi[3]} />
+            <SummaryCard currencyData={dataApi[4]} />
+            <SummaryCard currencyData={dataApi[5]} />
+          </div>
+        )}
+        {dataApi && (
           <ResponsiveContainer width="100%" height="100%">
             <LineChart
-                width={500}
-                height={300}
-                data={dataApi3,dataApi4}
-                margin={{
-                  top: 5,
-                  right: 30,
-                  left: 30,
-                  bottom: 5,
-                }}>
-              <CartesianGrid strokeDasharray="1 1" />
-              <XAxis dataKey="dayjs(timestamp)" />
+              width={500}
+              height={300}
+              data={dataGrapĥ}
+              margin={{
+                top: 5,
+                right: 30,
+                left: 30,
+                bottom: 5,
+              }}
+            >
+              <CartesianGrid strokeDasharray="1 10" />
+              <XAxis dataKey="timestamp" tick={false}/>
               <YAxis />
-              <Tooltip />
+              <Tooltip
+                labelStyle={{ color: "#000000" }}
+                cursor={{ stroke: "red", strokeWidth: 2 }}
+              />
               <Legend />
-              <Line type="plot" dataKey="Price" stroke="#82ca9d"  />
-              <Line type="plot" dataKey="Price2" stroke="#8884d8" />
-              </LineChart>
+              <Line type="monotone" dataKey="btc" stroke="#82ca9d" unit=" $" dot={false}/>
+              <Line type="monotone" dataKey="eth" stroke="#8884d8" unit=" $" dot={false}/>
+            </LineChart>
           </ResponsiveContainer>
-        }
+        )}
       </main>
       <nav className="total">
         <ul>
-          <a>Total <br />Cryptocurrencies</a><br />
-          <a></a>
+          <div>Total Cryptocurrencies</div>
           {dataApi2 ? millify(dataApi2.totalCoins) : null}
-          <br /><br />
-          <a>Total Exchanges</a><br />
-          <a></a>
+          <div>Total Exchanges</div>
           {dataApi2 ? millify(dataApi2.totalExchanges) : null}
-          <br /><br />
-          <a>Total Market</a><br />
-          <a></a>
+          <div>Total Market</div>
           {dataApi2 ? `$ ${millify(dataApi2.totalMarkets)}` : null}
-          <br /><br />
-          <a>Total Market Cap</a><br />
-          <a></a>
+          <div>Total Market Cap</div>
           {dataApi2 ? `$ ${millify(dataApi2.totalMarketCap)}` : null}
-          <br /><br />
-          <a>Total 24h Volume</a><br />
-          <a></a>
+          <div>Total 24h Volume</div>
           {dataApi2 ? `$ ${millify(dataApi2.total24hVolume)}` : null}
-          <br /><br />
+          <div>Change time interval</div>
+          <select onChange={(e) => {
+            setTimeInterval(e.target.value)
+          }}>
+            <option value="7d">7 Days</option>
+            <option value="1d">1 day</option>
+            <option value="30d">1 month</option>
+          </select>
         </ul>
       </nav>
     </Layout>
-  )
-}
+  );
+};
 
 export default Homepage;
