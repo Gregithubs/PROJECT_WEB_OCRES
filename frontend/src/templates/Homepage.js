@@ -97,7 +97,7 @@ const Homepage = () => {
                   right: 30,
                   left: 30,
                   bottom: 5,
-        }}>
+                }}>
                <CartesianGrid strokeDasharray="3 3" />
                <XAxis dataKey="timestamp" />
                <YAxis />

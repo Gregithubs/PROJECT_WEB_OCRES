@@ -116,12 +116,12 @@ a {
   }
   
   .jeandidier{
-  margin-left: 10px;
-  margin-top: 10px;
-  text-align: center;
-  width : 200px; 
-  height : 150px;
-  border-radius : 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: center;
+    width : 200px; 
+    height : 130px;
+    border-radius : 10px;
   }
 
   .about-user {
@@ -153,10 +153,14 @@ a {
   }
   .btn{
     background-color: #2b2929;
-    padding: auto;
     box-sizing: content-box;
-    width: 8%;
-    height:65px;
     color: #ffbb00;
     font-size:large;
+    text-align: center;
+    width : 130px; 
+    height : 35px;
+    border-radius : 10px;
+    position:fixed;
+    margin-top: 5px;
+    margin-left: 70rem;
   }

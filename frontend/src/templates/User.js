@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import Layout from "../Components/Layout"
+
 var image=require('./jeandidier.jpg')
 
 const User = () => {
@@ -8,12 +8,9 @@ const User = () => {
   return (
     <Layout>
         <textearea className="about-user">
-            <h1>Page de Profil
-              <div id="buttons">
-                <button class="btn" id="walletBtn" href="/Wallet"> Wallet </button>
-                </div></h1><br />
+          <h1>Page de Profil</h1><br />
         Bienvenue sur votre Profil ! Ici vous pourrez voir votre portefeuille et son évolution. <br />
-        Vous pourrez aussi aller regarder le portefeuilles de vos amis et voir si leurs investissements se portent bien!<br /><br />
+        Vous pourrez aussi aller regarder le portefeuilles de vos amis et voir si leurs investissements se portent bien!<br />
         <h1>Infos</h1>
         <img class="jeandidier" src={image} alt="" /> <br /> <br />
         <div className="infos-profil">

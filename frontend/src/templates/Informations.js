@@ -10,7 +10,7 @@ const Informations = () => {
             de marketing d’affiliation opérant dans une pléthore de secteurs verticaux de grande valeur basée à Paris.<br /><br />
             
             <h1>Adresse</h1><br />
-            ECE Crypto<br />
+            Crypto'cres<br />
             Company number : 000001<br />
             37 Quai de Grenelle<br />
             75015<br />
