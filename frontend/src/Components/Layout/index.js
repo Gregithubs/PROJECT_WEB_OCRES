@@ -15,6 +15,7 @@ export default function Layout(props) {
                         <li><Link to="/user">Profil</Link></li>
                         <li><Link to="/news">News</Link></li>
                         <li><Link to="/informations">About</Link></li>
+                        <li> <Link to="/Signin"> Signin </Link></li>
                     </ul>
                 </aside>
                 <main className="left">
