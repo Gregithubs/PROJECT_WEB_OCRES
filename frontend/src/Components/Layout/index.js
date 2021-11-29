@@ -1,4 +1,3 @@
-import { props } from 'ramda'
 import React from 'react'
 import { Link } from "react-router-dom";
 

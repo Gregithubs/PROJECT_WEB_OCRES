@@ -60,7 +60,7 @@ const Homepage = () => {
                 timestamp: itm.timestamp,
                 Price2: itm.price
         }})
-        setDataApi4(items_restructured);
+        setDataApi3(items_restructured);
       })
 
   }, []);
@@ -70,7 +70,7 @@ const Homepage = () => {
       <main className="widgets">
         {dataApi &&
           (
-            <div className="row1">
+            <div className="row">
               <SummaryCard currencyData={dataApi[0]} />
               <SummaryCard currencyData={dataApi[1]} />
               <SummaryCard currencyData={dataApi[2]} />
@@ -79,7 +79,7 @@ const Homepage = () => {
         }
         {dataApi &&
           (
-            <div className="row1">
+            <div className="row">
               <SummaryCard currencyData={dataApi[3]} />
               <SummaryCard currencyData={dataApi[4]} />
               <SummaryCard currencyData={dataApi[5]} />
@@ -91,14 +91,13 @@ const Homepage = () => {
              <LineChart
                 width={500}
                 height={300}
-                data={dataApi3 , dataApi4}
+                data={dataApi3}
                 margin={{
                   top: 5,
                   right: 30,
                   left: 30,
                   bottom: 5,
-               }}
-             >
+        }}>
                <CartesianGrid strokeDasharray="3 3" />
                <XAxis dataKey="timestamp" />
                <YAxis />
@@ -113,7 +112,7 @@ const Homepage = () => {
       <nav className="total">
         <ul>
           <a>Total <br />Cryptocurrencies</a><br />
-          <a></a>m
+          <a></a>
           {dataApi2 ? millify(dataApi2.totalCoins) : null}
           <br /><br />
           <a>Total Exchanges</a><br />

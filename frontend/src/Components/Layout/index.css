@@ -1,6 +1,6 @@
 .app-header {
     background-color: #000000;
-    height: 100vh;
+    height:100vh;
     display: flex;
     flex-direction: column;
     color: #ffbb00; 
@@ -60,7 +60,7 @@ a {
   .total {
     margin-top: 3rem;
     margin-left: 5rem;
-    font-size: 20px;
+    font-size: 22px;
     color: #ffbb00; 
     max-width: 195px;
   }
@@ -80,15 +80,8 @@ a {
     justify-content: center;
   }
 
-  .row1 {
+  .row {
     display: flex;
-    gap: 1rem;
-  }
-
-  .row2 {
-    display: flex;
-    width: 100%;
-    justify-content: center;
     gap: 1rem;
   }
 
