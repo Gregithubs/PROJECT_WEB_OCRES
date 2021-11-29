@@ -41,12 +41,11 @@ const Homepage = () => {
         const items = res.data.data.history;
         const items_restructured = items.map(itm => {
             return {
-                timestamp: itm.timestamp,                
+              timestamp: itm.timestamp,                
                 Price: itm.price
         }})
         setDataApi3(items_restructured);
       })
-
       axios.get("https://coinranking1.p.rapidapi.com/coin/3/history/7d", {
       headers: {
         'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
@@ -60,12 +59,16 @@ const Homepage = () => {
                 timestamp: itm.timestamp,
                 Price2: itm.price
         }})
-        setDataApi3(items_restructured);
+        setDataApi4(items_restructured);
       })
 
   }, []);
-
+  for (let i = 0; i < array1.length; i++) {
+    array3 = {timestamp, price1: array1[i].price, price2: array2[i].price}
+    console.log(array1,array2)
+ }
   return (
+    
     <Layout>
       <main className="widgets">
         {dataApi &&
@@ -87,26 +90,26 @@ const Homepage = () => {
           )
         }
         {dataApi &&
-             <ResponsiveContainer width="100%" height="100%">
-             <LineChart
+          <ResponsiveContainer width="100%" height="100%">
+            <LineChart
                 width={500}
                 height={300}
-                data={dataApi3}
+                data={dataApi3,dataApi4}
                 margin={{
                   top: 5,
                   right: 30,
                   left: 30,
                   bottom: 5,
                 }}>
-               <CartesianGrid strokeDasharray="3 3" />
-               <XAxis dataKey="timestamp" />
-               <YAxis />
-               <Tooltip />
-               <Legend />
-               <Line type="plot" dataKey="Price" stroke="#82ca9d" />
-               <Line type="plot" dataKey="Price2" stroke="#8884d8" />
-             </LineChart>
-           </ResponsiveContainer>
+              <CartesianGrid strokeDasharray="1 1" />
+              <XAxis dataKey="dayjs(timestamp)" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Line type="plot" dataKey="Price" stroke="#82ca9d"  />
+              <Line type="plot" dataKey="Price2" stroke="#8884d8" />
+              </LineChart>
+          </ResponsiveContainer>
         }
       </main>
       <nav className="total">
