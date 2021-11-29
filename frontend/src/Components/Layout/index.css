@@ -158,4 +158,12 @@ a {
   .desktop p {
     padding-top: 2%;
   }
-
+  .btn{
+    background-color: #2b2929;
+    padding: auto;
+    box-sizing: content-box;
+    width: 8%;
+    height:65px;
+    color: #ffbb00;
+    font-size:large;
+  }

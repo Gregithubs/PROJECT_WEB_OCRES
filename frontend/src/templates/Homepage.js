@@ -104,8 +104,8 @@ const Homepage = () => {
                <YAxis />
                <Tooltip />
                <Legend />
-               <Line type="monotone" dataKey="Price" stroke="#82ca9d" />
-               <Line type="monotone" dataKey="Price2" stroke="#8884d8" />
+               <Line type="plot" dataKey="Price" stroke="#82ca9d" />
+               <Line type="plot" dataKey="Price2" stroke="#8884d8" />
              </LineChart>
            </ResponsiveContainer>
         }
