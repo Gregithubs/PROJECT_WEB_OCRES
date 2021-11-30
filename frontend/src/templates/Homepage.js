@@ -71,7 +71,7 @@ const Homepage = () => {
           .then((response) => {
             const items_2 = response.data.data.history;
             axios
-            .get("https://coinranking1.p.rapidapi.com/coin/5/history/"+timeInterval, {
+            .get("https://coinranking1.p.rapidapi.com/coin/70/history/"+timeInterval, {
             headers: {
               "x-rapidapi-host": "coinranking1.p.rapidapi.com",
               "x-rapidapi-key":
@@ -81,7 +81,7 @@ const Homepage = () => {
             .then((response) => {
               const items_3 = response.data.data.history;
               axios
-              .get("https://coinranking1.p.rapidapi.com/coin/16/history/"+timeInterval, {
+              .get("https://coinranking1.p.rapidapi.com/coin/118/history/"+timeInterval, {
               headers: {
                 "x-rapidapi-host": "coinranking1.p.rapidapi.com",
                 "x-rapidapi-key":
