@@ -1,167 +1,168 @@
 .app-header {
-    background-color: #181818;
-    height:100vh;
-    display: flex;
-    flex-direction: column;
-    color: #ffbb00; 
-  }
-   
+  background-color: #181818;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  color: #ffbb00; 
+}
+ 
 a {
-  color: #ffbb00;
-  text-decoration: none;
+color: #ffbb00;
+text-decoration: none;
 }
 
-  * {
-  margin:0;
-  padding:0;
-  font-family:"Poppins", sans-serif;
-  box-sizing: border-box;
-  }
-  
-  .app-link {
-    color: #09d3ac;
-  }
-  
-  .app-header main nav ul li :hover
-  {
-      background: #ffffff52;
-  }
-  
-  .title {
-    background-color: #2b2929;
-    color: #ffbb00;
-  }
-  
-  .main {
-    display: flex;
-    gap: 1rem; 
-    height: 100%;
-  }
-  
-  .menu {
-    line-height : 3;
-    font-size: 25px;
-    padding: 1rem 2rem;
-    list-style: none;
-    background-color: #2b2929;
-    color: #ffbb00; 
-    max-width: 195px;
-    height: 100%;
-  }
-  
-  .header{
-    background-color: #2b2929;
-    display: flex;
-    font-weight: bold;
-    font-size: 40px;
-    justify-content: center;
-  }
+* {
+margin:0;
+padding:0;
+font-family:"Poppins", sans-serif;
+box-sizing: border-box;
+}
 
-  .total {
-    margin-top: 3rem;
-    margin-left: 5rem;
-    font-size: 22px;
-    color: #ffbb00; 
-    max-width: 195px;
-  }
+.app-link {
+  color: #09d3ac;
+}
 
-  .left {
-    display: flex; 
-    justify-content: center; 
-    width: 100%;
-    padding: 2rem;
-  }
+.app-header main nav ul li :hover
+{
+    background: #ffffff52;
+}
 
-  .widgets {
-    display: flex;
-    flex-direction: column;
-    max-width: 800px;
-    justify-content: center;
-  }
+.title {
+  background-color: #2b2929;
+  color: #ffbb00;
+}
 
-  .row {
-    display: flex;
-    gap: 1rem;
-  }
+.main {
+  display: flex;
+  gap: 1rem; 
+  height: 100%;
+}
 
-  .about {
-    font-size: 20px;
-    color: #ffbb00; 
-    height: 100%;
-    line-height: 1.75rem;
-  }
-  
-  .merci {
-    font-size: 20px;
-    color: #ffbb00; 
-    text-align: bottom;
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-  }
+.menu {
+  line-height : 3;
+  font-size: 25px;
+  padding: 1rem 2rem;
+  list-style: none;
+  background-color: #2b2929;
+  color: #ffbb00; 
+  max-width: 195px;
+  height: 100%;
+}
 
-  .amis {
-    font-size: 20px;
-    color: #ffbb00; 
-    margin-top: 3rem;
-    margin-right: 5rem;
-    line-height: 2.5rem;
-  }
+.header{
+  background-color: #2b2929;
+  display: flex;
+  font-weight: bold;
+  font-size: 40px;
+  justify-content: center;
+}
 
-  .infos-profil {
-    font-size: 20px;
-    color: #ffbb00; 
-    line-height: 2rem;
-  }
-  
-  .jeandidier{
-    margin-left: 10px;
-    margin-top: 10px;
-    text-align: center;
-    width : 200px; 
-    height : 130px;
-    border-radius : 10px;
-  }
+.total {
+  margin-top: 3rem;
+  margin-left: 5rem;
+  font-size: 22px;
+  color: #ffbb00; 
+  max-width: 195px;
+}
 
-  .about-user {
-    font-size: 20px;
-    padding-right: 200px;
-    color: #ffbb00; 
-    height: 100%;
-  }
+.left {
+  display: flex; 
+  justify-content: center; 
+  width: 100%;
+  padding: 2rem;
+}
 
-  .big-screen {
-    width: 600px;
-    height: 100px;
-    background: #7c52bf;
-    margin: 0 auto;  
-  }
-  
-  .big-screen p {
-    padding-top: 2%;
-  }
+.widgets {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px;
+  justify-content: center;
+}
 
-  .desktop {
-    width: 400px;
-    height: 100px;
-    background: #b097d8;
-    margin: 0 auto;
-  }
+.row {
+  display: flex;
+  gap: 1rem;
+}
 
-  .desktop p {
-    padding-top: 2%;
-  }
+.about {
+  font-size: 20px;
+  color: #ffbb00; 
+  height: 100%;
+  line-height: 1.75rem;
+}
 
-  .btn {
-    background-color: #2b2929;
-    box-sizing: content-box;
-    color: #ffbb00;
-    font-size:23px;
-    text-align: center;
-    width : 130px; 
-    height : 35px;
-    border-radius : 10px;
-    position:fixed;
-    margin-top: 5px;
-    margin-left: 70rem; 
-  }
+.merci {
+  font-size: 20px;
+  color: #ffbb00; 
+  text-align: bottom;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.amis {
+  font-size: 20px;
+  color: #ffbb00; 
+  margin-top: 3rem;
+  margin-right: 5rem;
+  line-height: 2.5rem;
+}
+
+.infos-profil {
+  font-size: 20px;
+  color: #ffbb00; 
+  line-height: 2rem;
+}
+
+.jeandidier{
+  margin-left: 10px;
+  margin-top: 10px;
+  text-align: center;
+  width : 200px; 
+  height : 130px;
+  border-radius : 10px;
+}
+
+.about-user {
+  font-size: 20px;
+  padding-right: 200px;
+  color: #ffbb00; 
+  height: 100%;
+}
+
+.big-screen {
+  width: 600px;
+  height: 100px;
+  background: #7c52bf;
+  margin: 0 auto;  
+}
+
+.big-screen p {
+  padding-top: 2%;
+}
+
+.desktop {
+  width: 400px;
+  height: 100px;
+  background: #b097d8;
+  margin: 0 auto;
+}
+
+.desktop p {
+  padding-top: 2%;
+}
+
+.btn {
+  background-color: #2b2929;
+  box-sizing: content-box;
+  color: #ffbb00;
+  font-size:23px;
+  text-align: center;
+  width : 130px; 
+  height : 35px;
+  border-radius : 10px;
+  position:fixed;
+  margin-top: 5px;
+  margin-left: 70rem; 
+}
