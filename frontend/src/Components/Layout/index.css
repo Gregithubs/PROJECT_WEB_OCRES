@@ -326,7 +326,6 @@ box-sizing: border-box;
   width : 130px; 
   height : 35px;
   border-radius : 10px;
-  position:fixed;
+  position:relative;
   margin-top: 5px;
-  margin-left: 70rem; 
 }

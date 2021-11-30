@@ -35,7 +35,8 @@ const Signin = () => (
         isSubmitting
       }) => (
         <form onSubmit={handleSubmit} className="formulaire">
-          <li>
+          <ul>
+            
             <input
             type="email"
             name="email"
@@ -44,8 +45,9 @@ const Signin = () => (
             value={values.email}
           />
           {errors.email && touched.email && errors.email}
-          </li>
-         <li>
+          </ul>
+         <ul>
+           
           <input
           
             type="password"
@@ -55,7 +57,7 @@ const Signin = () => (
             value={values.password}
           />
           {errors.password && touched.password && errors.password}
-          </li>
+          </ul>
           <button type="submit" disabled={isSubmitting}>
             Submit
           </button>
