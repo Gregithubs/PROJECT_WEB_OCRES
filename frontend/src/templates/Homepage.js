@@ -30,7 +30,7 @@ const Homepage = () => {
   useEffect(() => {
     axios
       .get(
-        `https://api.nomics.com/v1/currencies/ticker?key=${apiKey}&ids=BTC,YFI,ETH,MKR,RENBTC,WBTC&interval=1d,30d&per-page=100&page=1`
+        `https://api.nomics.com/v1/currencies/ticker?key=${apiKey}&ids=BTC,YFI,ETH,MKR,RENBTC,KP3R&interval=1d,7d,30d,365d,ytd&convert=EUR&per-page=100&page=1`
       )
       .then((res) => {
         const items = res.data;
@@ -91,7 +91,7 @@ const Homepage = () => {
               .then((response) => {
                 const items_4 = response.data.data.history;
                 axios
-                .get("https://coinranking1.p.rapidapi.com/coin/71/history/"+timeInterval, {
+                .get("https://coinranking1.p.rapidapi.com/coin/235/history/"+timeInterval, {
                 headers: {
                   "x-rapidapi-host": "coinranking1.p.rapidapi.com",
                   "x-rapidapi-key":
@@ -118,8 +118,8 @@ const Homepage = () => {
                       timestamp: a.toDateString() + " " + a.toLocaleTimeString(),
                       btc: items[i].price,
                       eth: items_2[i].price,
-                      sol: items_3[i].price,
-                      wbtc: items_4[i].price,
+                      mkr: items_3[i].price,
+                      kp3r: items_4[i].price,
                       yfi: items_5[i].price,
                       renbtc: items_6[i].price,
                     });
@@ -173,8 +173,8 @@ const Homepage = () => {
               <Legend />
               <Line type="monotone" dataKey="btc" stroke="#FF5733" unit=" $" dot={false}/>FF5733
               <Line type="monotone" dataKey="eth" stroke="#8401EF" unit=" $" dot={false}/>
-              <Line type="monotone" dataKey="sol" stroke="#004CFF" unit=" $" dot={false}/>
-              <Line type="monotone" dataKey="wbtc" stroke="#04B5F9" unit=" $" dot={false}/>
+              <Line type="monotone" dataKey="mkr" stroke="#004CFF" unit=" $" dot={false}/>
+              <Line type="monotone" dataKey="kp3r" stroke="#04B5F9" unit=" $" dot={false}/>
               <Line type="monotone" dataKey="yfi" stroke="#FF33E0" unit=" $" dot={false}/>
               <Line type="monotone" dataKey="renbtc" stroke="#03D502" unit=" $" dot={false}/>
             </LineChart>
@@ -197,9 +197,9 @@ const Homepage = () => {
           <select onChange={(e) => {
             setTimeInterval(e.target.value)
           }}>
+            <option value="1d">1 Day</option>
             <option value="7d">7 Days</option>
-            <option value="1d">1 day</option>
-            <option value="30d">1 month</option>
+            <option value="30d">1 Month</option>
           </select>
         </ul>
       </nav>
