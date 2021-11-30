@@ -45,7 +45,7 @@ const SummaryCard = ({ currencyData = {
             </div>
             <div className="info-container">
                 <p>Price : $ {priceFormatted}</p>
-                <p>Evolution : {price_change_pct}%</p>
+                <p>Evolution : {(Math.round(price_change_pct * 10000)/100).toFixed(2)}%</p>
                 <p>Exchanges : {num_exchanges}</p>
                 <p>Max Supply : {max_supply}</p>
                 <p>Rank : {rank}</p>
