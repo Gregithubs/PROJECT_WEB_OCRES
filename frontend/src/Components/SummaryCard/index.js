@@ -5,30 +5,28 @@ import "./index.css"
 
 const SummaryCard = ({ currencyData = {
     name: "",
-    symbol: "",
     price: "",
     logo_url: "",
 } }) => {
     const {
         name,
-        symbol,
         price,
         logo_url,
         rank,
-        max_supply,
+        status,
         num_exchanges,
     } = currencyData
     if (name === "") {
         return (<div className="container">
             <div className="title-container">
                 <img src={logo_url} alt="" width={30} height={30} />
-                <p>Symbol / Name</p>
+                <p>Name</p>
             </div>
             <div className="info-container">
                 <p>Price : $</p>
                 <p>Evolution : %</p>
                 <p>Exchanges : </p>
-                <p>Max Supply : </p>
+                <p>Status : </p>
                 <p>Rank : </p>
             </div>
         </div>)
@@ -41,13 +39,13 @@ const SummaryCard = ({ currencyData = {
         <div className="container">
             <div className="title-container">
                 <img src={logo_url} alt="" width={30} height={30} />
-                <p>{symbol} / {name}</p>
+                <p>{name}</p>
             </div>
             <div className="info-container">
                 <p>Price : $ {priceFormatted}</p>
-                <p>Evolution : {price_change_pct}%</p>
+                <p>Evolution : {(Math.round(price_change_pct * 10000)/100).toFixed(2)}%</p>
                 <p>Exchanges : {num_exchanges}</p>
-                <p>Max Supply : {max_supply}</p>
+                <p>Status : {status}</p>
                 <p>Rank : {rank}</p>
             </div>
             
