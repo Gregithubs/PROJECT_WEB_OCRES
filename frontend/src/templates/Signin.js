@@ -1,44 +1,71 @@
-import React, { useEffect, useState } from 'react';
-import axios from "axios"
-import Layout from "../Components/Layout"
-
-const Signin = () => {
-  const [dataApi, setDataApi] = useState(null)
-
-  useEffect(() => {
-    axios.get("https://bing-news-search1.p.rapidapi.com/news", {
-      headers: {
-        'x-bingapis-sdk': 'true',
-        'x-rapidapi-host': 'bing-news-search1.p.rapidapi.com',
-        'x-rapidapi-key': 'c75bfb7a18msh8c51fe9e891ca40p104a36jsnfb1c942a4971'
-      }
-    })
-      .then((res) => {
-        const items = res.data.data;
-        setDataApi(items);
-      })
-
-  }, []);
-  return (
-    <Layout>
-      <main className="widgets">
-        {dataApi &&
-          (
-            <div className="row1">
-
-            </div>
-          )
+import React from 'react';
+import { Formik } from 'formik';
+import Layout from '../Components/Layout';
+const Signin = () => (
+  <Layout>
+  <div>
+    <h1>Sign in!</h1>
+    <Formik
+      initialValues={{ email: 'entrez votre mail', password: 'entrez votre mot de passe' }}
+      validate={values => {
+        const errors = {};
+        if (!values.email) {
+          errors.email = 'Required';
+        } else if (
+          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+        ) {
+          errors.email = 'Invalid email address';
         }
-        {dataApi &&
-          (
-            <div className="row1">
-
-            </div>
-          )
-        }
-      </main>
-    </Layout>
-  )
-}
+        return errors;
+      }}
+      onSubmit={(values, { setSubmitting }) => {
+        setTimeout(() => {
+          alert(JSON.stringify(values, null, 2));
+          setSubmitting(false);
+        }, 400);
+      }}
+    >
+      {({
+        values,
+        errors,
+        touched,
+        handleChange,
+        handleBlur,
+        handleSubmit,
+        isSubmitting
+      }) => (
+        <form onSubmit={handleSubmit} className="formulaire">
+          <ul>
+            
+            <input
+            type="email"
+            name="email"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.email}
+          />
+          {errors.email && touched.email && errors.email}
+          </ul>
+         <ul>
+           
+          <input
+          
+            type="password"
+            name="password"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.password}
+          />
+          {errors.password && touched.password && errors.password}
+          </ul>
+          <button type="submit" disabled={isSubmitting}>
+            Submit
+          </button>
+        </form>
+      )}
+    </Formik>
+  </div>
+  </Layout>
+);
 
 export default Signin;

@@ -9,7 +9,8 @@ export default function Layout(props) {
         <div className="app-header">
             <header className="header">Crypto'cres
             <div className="header">
-                <button className="btn" id="walletBtn"> <Link to="/wallet">Wallet</Link> </button>
+                <button className="btn" id="walletBtn">
+                     <Link to="/wallet">Wallet</Link> </button>
             </div>
             </header>
             <div className="main">
@@ -19,7 +20,7 @@ export default function Layout(props) {
                         <li><Link to="/user">Profil</Link></li>
                         <li><Link to="/news">News</Link></li>
                         <li><Link to="/informations">About</Link></li>
-                        <li> <Link to="/signin"> Signin </Link></li>
+                        <li> <Link to="/Signin"> Sign in </Link></li>
                     </ul>
                 </aside>
                 <main className="left">
