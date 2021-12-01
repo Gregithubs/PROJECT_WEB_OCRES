@@ -197,7 +197,6 @@ const Homepage = () => {
           <select onChange={(e) => {
             setTimeInterval(e.target.value)
           }}>
-            <option value="1d">1 Day</option>
             <option value="7d">7 Days</option>
             <option value="30d">1 Month</option>
           </select>
