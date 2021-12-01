@@ -8,8 +8,8 @@
 }
  
 a {
-color: #ffbb00;
-text-decoration: none;
+  color: rgb(254, 255, 208);
+  text-decoration: none;
 }
 
 * {
@@ -46,8 +46,9 @@ text-decoration: none;
   padding: 1rem 2rem;
   list-style: none;
   background-color: #2b2929;
-  color: #ffbb00; 
+  color: rgb(254, 255, 208);
   height: 100%;
+  max-width: 195px;
 }
 
 .header{
@@ -61,9 +62,9 @@ text-decoration: none;
 .total {
   margin-top: 3rem;
   margin-left: 5rem;
-  font-size: 22px;
+  font-size: 25px;
   color: #ffbb00; 
-  max-width: 195px;
+  max-width: 230px;
 }
 
 .left {
@@ -78,6 +79,7 @@ text-decoration: none;
   flex-direction: column;
   gap: 1rem;
   max-width: 800px;
+  max-height: 800px;
   justify-content: center;
 }
 
@@ -88,14 +90,14 @@ text-decoration: none;
 
 .about {
   font-size: 20px;
-  color: #ffbb00; 
+  color: rgb(254, 255, 208);
   height: 100%;
   line-height: 1.75rem;
 }
 
 .merci {
   font-size: 20px;
-  color: #ffbb00; 
+  color: rgb(254, 255, 208);
   text-align: bottom;
   position: absolute;
   right: 10px;
@@ -104,7 +106,7 @@ text-decoration: none;
 
 .amis {
   font-size: 20px;
-  color: #ffbb00; 
+  color: rgb(254, 255, 208);
   margin-top: 3rem;
   margin-right: 5rem;
   line-height: 2.5rem;
@@ -112,7 +114,7 @@ text-decoration: none;
 
 .infos-profil {
   font-size: 20px;
-  color: #ffbb00; 
+  color: rgb(254, 255, 208);
   line-height: 2rem;
 }
 
@@ -128,36 +130,14 @@ text-decoration: none;
 .about-user {
   font-size: 20px;
   padding-right: 200px;
-  color: #ffbb00; 
+  color: rgb(254, 255, 208);
   height: 100%;
-}
-
-.big-screen {
-  width: 600px;
-  height: 100px;
-  background: #7c52bf;
-  margin: 0 auto;  
-}
-
-.big-screen p {
-  padding-top: 2%;
-}
-
-.desktop {
-  width: 400px;
-  height: 100px;
-  background: #b097d8;
-  margin: 0 auto;
-}
-
-.desktop p {
-  padding-top: 2%;
 }
 
 .btn {
   background-color: #2b2929;
   box-sizing: content-box;
-  color: #ffbb00;
+  color: rgb(254, 255, 208);
   font-size:23px;
   text-align: center;
   width : 130px; 
@@ -193,5 +173,6 @@ text-decoration: none;
     display: flex;
     max-width: 10rem;
     flex-direction: column;
+    justify-content: center;
   }
 }
