@@ -3,7 +3,8 @@ import { Formik } from 'formik';
 import Layout from '../Components/Layout';
 const Signin = () => (
   <Layout>
-  <div>
+  <div className="login">
+  <div >
     <h1>Sign in!</h1>
     <Formik
       initialValues={{ email: 'entrez votre mail', password: 'entrez votre mot de passe' }}
@@ -64,6 +65,7 @@ const Signin = () => (
         </form>
       )}
     </Formik>
+  </div>
   </div>
   </Layout>
 );
