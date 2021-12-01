@@ -33,7 +33,7 @@ const SummaryCard = ({ currencyData = {
     }
 
     const { price_change_pct } = R.pathOr(null, ['1d'], currencyData)
-    const priceFormatted = (Math.round(price * 100) / 100).toFixed(2)
+    const priceFormatted = (Math.round(price * 100) / 100).toFixed(1)
 
     return (
         <div className="container">
@@ -44,9 +44,11 @@ const SummaryCard = ({ currencyData = {
             <div className="info-container">
                 <p>Price : $ {priceFormatted}</p>
                 <p>Evolution : {(Math.round(price_change_pct * 10000)/100).toFixed(2)}%</p>
-                <p>Exchanges : {num_exchanges}</p>
-                <p>Status : {status}</p>
-                <p>Rank : {rank}</p>
+                <div className="info-container-extra">
+                    <p>Exchanges : {num_exchanges}</p>
+                    <p>Status : {status}</p>
+                    <p>Rank : {rank}</p>
+                </div>
             </div>
             
         </div>
