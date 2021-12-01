@@ -149,7 +149,7 @@ a {
 
   .row {
     display: flex;
-    max-width: 10rem;
+    max-width: 13rem;
     flex-direction: column;
     justify-content: center;
   }
