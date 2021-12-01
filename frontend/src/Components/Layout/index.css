@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 .app-header {
   background-color: #181818;
   height:100vh;
@@ -13,19 +13,18 @@ text-decoration: none;
 }
 
 * {
-margin:0;
-padding:0;
-font-family:"Poppins", sans-serif;
-box-sizing: border-box;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
 }
 
 .app-link {
   color: #09d3ac;
 }
 
-.app-header main nav ul li :hover
+.menu li :hover
 {
-    background: #ffffff52;
+  background: #ffffff52;
 }
 
 .title {
@@ -78,6 +77,7 @@ box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  max-width: 800px;
   justify-content: center;
 }
 
@@ -132,170 +132,44 @@ box-sizing: border-box;
   height: 100%;
 }
 
+.big-screen {
+  width: 600px;
+  height: 100px;
+  background: #7c52bf;
+  margin: 0 auto;  
+}
+
+.big-screen p {
+  padding-top: 2%;
+}
+
+.desktop {
+  width: 400px;
+  height: 100px;
+  background: #b097d8;
+  margin: 0 auto;
+}
+
+.desktop p {
+  padding-top: 2%;
+}
+
 .btn {
   background-color: #2b2929;
   box-sizing: content-box;
   color: #ffbb00;
-  text-decoration: none;
+  font-size:23px;
+  text-align: center;
+  width : 130px; 
+  height : 35px;
+  border-radius : 10px;
+  position:fixed;
+  margin-top: 5px;
+  margin-left: 70rem; 
 }
-
-  * {
-  margin:0;
-  padding:0;
-  font-family:"Poppins", sans-serif;
-  box-sizing: border-box;
-  }
-  
-  .app-link {
-    color: #09d3ac;
-  }
-  
- 
-  
-  .title {
-    background-color: #2b2929;
-    color: #ffbb00;
-  }
-  
-  .main {
-    display: flex;
-    gap: 1rem; 
-    height: 100%;
-  }
-  
-  .menu {
-    line-height : 3;
-    font-size: 25px;
-    padding: 1rem 2rem;
-    list-style: none;
-    background-color: #2b2929;
-    color: #ffbb00; 
-    max-width: 195px;
-    height: 100%;
-  }
-  .menu li :hover{
-    background: #ffffff52;
-  }
-  .header{
-    background-color: #2b2929;
-    display: flex;
-    font-weight: bold;
-    font-size: 40px;
-    justify-content: center;
-  }
-
-  .total {
-    margin-top: 3rem;
-    margin-left: 5rem;
-    font-size: 22px;
-    color: #ffbb00; 
-    max-width: 195px;
-  }
-
-  .left {
-    display: flex; 
-    justify-content: center; 
-    width: 100%;
-    padding: 2rem;
-  }
-
-  .widgets {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 800px;
-    justify-content: center;
-  }
-
-  .row {
-    display: flex;
-    gap: 1rem;
-  }
-
-  .about {
-    font-size: 20px;
-    color: #ffbb00; 
-    height: 100%;
-    line-height: 1.75rem;
-  }
-  
-  .merci {
-    font-size: 20px;
-    color: #ffbb00; 
-    text-align: bottom;
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-  }
-
-  .amis {
-    font-size: 20px;
-    color: #ffbb00; 
-    margin-top: 3rem;
-    margin-right: 5rem;
-    line-height: 2.5rem;
-  }
-
-  .infos-profil {
-    font-size: 20px;
-    color: #ffbb00; 
-    line-height: 2rem;
-  }
-  
-  .jeandidier{
-    margin-left: 10px;
-    margin-top: 10px;
-    text-align: center;
-    width : 200px; 
-    height : 130px;
-    border-radius : 10px;
-  }
-
-  .about-user {
-    font-size: 20px;
-    padding-right: 200px;
-    color: #ffbb00; 
-    height: 100%;
-  }
-
-  .big-screen {
-    width: 600px;
-    height: 100px;
-    background: #7c52bf;
-    margin: 0 auto;  
-  }
-  
-  .big-screen p {
-    padding-top: 2%;
-  }
-
-  .desktop {
-    width: 400px;
-    height: 100px;
-    background: #b097d8;
-    margin: 0 auto;
-  }
-
-  .desktop p {
-    padding-top: 2%;
-  }
-
-  .btn {
-    background-color: #2b2929;
-    box-sizing: content-box;
-    color: #ffbb00;
-    font-size:23px;
-    text-align: center;
-    width : 130px; 
-    height : 35px;
-    border-radius : 10px;
-    position:fixed;
-    margin-top: 5px;
-    margin-left: 70rem; 
-  }
-  .btn :hover{
-    background: #ffffff52;
-  }
+.btn :hover{
+  background: #ffffff52;
+}
 
 .formulaire {
   box-sizing: border-box;
