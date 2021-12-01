@@ -6,7 +6,7 @@ const Informations = () => {
         <Layout>
             <textearea className="about">
                 <h1>Qui sommes-nous?</h1><br />
-            Nous sommes ECE Crypto, une société de génération de leads et 
+            Nous sommes Crypto'cres, une société de génération de leads et 
             de marketing d’affiliation opérant dans une pléthore de secteurs verticaux de grande valeur basée à Paris.<br /><br />
             
             <h1>Adresse</h1><br />
