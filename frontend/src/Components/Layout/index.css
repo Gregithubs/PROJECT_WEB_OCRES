@@ -83,11 +83,6 @@ a {
   justify-content: center;
 }
 
-.row {
-  display: flex;
-  gap: 1rem;
-}
-
 .about {
   font-size: 20px;
   color: rgb(254, 255, 208);
@@ -171,6 +166,7 @@ a {
   justify-content: center;
   flex-direction: column ;
 }
+
 @media screen and (max-width: 768px) {
   .info-container-extra {
     max-width: 10rem;
@@ -182,5 +178,13 @@ a {
     max-width: 10rem;
     flex-direction: column;
     justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .row {
+    display: flex;
+    min-width: 40rem;
+    gap: 1rem;
   }
 }
