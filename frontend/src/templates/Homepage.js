@@ -152,7 +152,7 @@ const Homepage = () => {
         )}
         {dataApi && (
           <ResponsiveContainer width="100%" height="100%">
-            <LineChart className="chart" data={dataGraph}>
+            <LineChart data={dataGraph}>
               <CartesianGrid strokeDasharray="1 10" />
               <XAxis dataKey="timestamp" tick={false}/>
               <YAxis />
