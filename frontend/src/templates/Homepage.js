@@ -184,15 +184,15 @@ const Homepage = () => {
       <nav className="total">
         <ul>
           <div>Total Cryptocurrencies</div>
-          {dataApi2 ? millify(dataApi2.totalCoins) : null}
+          {dataApi2 ? millify(dataApi2.totalCoins) : null}<br />
           <div>Total Exchanges</div>
-          {dataApi2 ? millify(dataApi2.totalExchanges) : null}
+          {dataApi2 ? millify(dataApi2.totalExchanges) : null}<br />
           <div>Total Market</div>
-          {dataApi2 ? `$ ${millify(dataApi2.totalMarkets)}` : null}
+          {dataApi2 ? `$ ${millify(dataApi2.totalMarkets)}` : null}<br />
           <div>Total Market Cap</div>
-          {dataApi2 ? `$ ${millify(dataApi2.totalMarketCap)}` : null}
+          {dataApi2 ? `$ ${millify(dataApi2.totalMarketCap)}` : null}<br />
           <div>Total 24h Volume</div>
-          {dataApi2 ? `$ ${millify(dataApi2.total24hVolume)}` : null}
+          {dataApi2 ? `$ ${millify(dataApi2.total24hVolume)}` : null}<br /><br />
           <div>Change time interval</div>
           <select onChange={(e) => {
             setTimeInterval(e.target.value)
