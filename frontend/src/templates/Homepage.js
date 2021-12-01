@@ -30,7 +30,7 @@ const Homepage = () => {
   useEffect(() => {
     axios
       .get(
-        `https://api.nomics.com/v1/currencies/ticker?key=${apiKey}&ids=BTC,YFI,ETH,MKR,RENBTC,KP3R&interval=1d,7d,30d,365d,ytd&convert=EUR&per-page=100&page=1`
+        `https://api.nomics.com/v1/currencies/ticker?key=${apiKey}&ids=AVAX,BNB,LTC,SOL,BCH,EGLD&interval=1d,7d,30d,365d,ytd&convert=EUR&per-page=100&page=1`
       )
       .then((res) => {
         const items = res.data;
@@ -51,7 +51,7 @@ const Homepage = () => {
       });
 
     axios
-      .get("https://coinranking1.p.rapidapi.com/coin/1/history/"+timeInterval, {
+      .get("https://coinranking1.p.rapidapi.com/coin/14/history/"+timeInterval, {
         headers: {
           "x-rapidapi-host": "coinranking1.p.rapidapi.com",
           "x-rapidapi-key":
@@ -61,7 +61,7 @@ const Homepage = () => {
       .then((res) => {
         const items = res.data.data.history;
         axios
-          .get("https://coinranking1.p.rapidapi.com/coin/2/history/"+timeInterval, {
+          .get("https://coinranking1.p.rapidapi.com/coin/4/history/"+timeInterval, {
             headers: {
               "x-rapidapi-host": "coinranking1.p.rapidapi.com",
               "x-rapidapi-key":
@@ -71,7 +71,7 @@ const Homepage = () => {
           .then((response) => {
             const items_2 = response.data.data.history;
             axios
-            .get("https://coinranking1.p.rapidapi.com/coin/70/history/"+timeInterval, {
+            .get("https://coinranking1.p.rapidapi.com/coin/72208/history/"+timeInterval, {
             headers: {
               "x-rapidapi-host": "coinranking1.p.rapidapi.com",
               "x-rapidapi-key":
@@ -81,7 +81,7 @@ const Homepage = () => {
             .then((response) => {
               const items_3 = response.data.data.history;
               axios
-              .get("https://coinranking1.p.rapidapi.com/coin/118/history/"+timeInterval, {
+              .get("https://coinranking1.p.rapidapi.com/coin/68905/history/"+timeInterval, {
               headers: {
                 "x-rapidapi-host": "coinranking1.p.rapidapi.com",
                 "x-rapidapi-key":
@@ -91,7 +91,7 @@ const Homepage = () => {
               .then((response) => {
                 const items_4 = response.data.data.history;
                 axios
-                .get("https://coinranking1.p.rapidapi.com/coin/235/history/"+timeInterval, {
+                .get("https://coinranking1.p.rapidapi.com/coin/7/history/"+timeInterval, {
                 headers: {
                   "x-rapidapi-host": "coinranking1.p.rapidapi.com",
                   "x-rapidapi-key":
@@ -101,7 +101,7 @@ const Homepage = () => {
                 .then((response) => {
                   const items_5 = response.data.data.history;
                   axios
-                  .get("https://coinranking1.p.rapidapi.com/coin/123/history/"+timeInterval, {
+                  .get("https://coinranking1.p.rapidapi.com/coin/70974/history/"+timeInterval, {
                   headers: {
                     "x-rapidapi-host": "coinranking1.p.rapidapi.com",
                     "x-rapidapi-key":
@@ -116,12 +116,12 @@ const Homepage = () => {
                     const a = new Date(items[i].timestamp);
                     data.push({
                       timestamp: a.toDateString() + " " + a.toLocaleTimeString(),
-                      btc: items[i].price,
-                      eth: items_2[i].price,
-                      mkr: items_3[i].price,
-                      kp3r: items_4[i].price,
-                      yfi: items_5[i].price,
-                      renbtc: items_6[i].price,
+                      bnb: items[i].price,
+                      bch: items_2[i].price,
+                      egld: items_3[i].price,
+                      sol: items_4[i].price,
+                      ltc: items_5[i].price,
+                      avax: items_6[i].price,
                     });
                   }
             setDataGraph(data);
@@ -171,12 +171,12 @@ const Homepage = () => {
                 cursor={{ stroke: "red", strokeWidth: 2 }}
               />
               <Legend />
-              <Line type="monotone" dataKey="btc" stroke="#FF5733" unit=" $" dot={false}/>FF5733
-              <Line type="monotone" dataKey="eth" stroke="#8401EF" unit=" $" dot={false}/>
-              <Line type="monotone" dataKey="mkr" stroke="#004CFF" unit=" $" dot={false}/>
-              <Line type="monotone" dataKey="kp3r" stroke="#04B5F9" unit=" $" dot={false}/>
-              <Line type="monotone" dataKey="yfi" stroke="#FF33E0" unit=" $" dot={false}/>
-              <Line type="monotone" dataKey="renbtc" stroke="#03D502" unit=" $" dot={false}/>
+              <Line type="monotone" dataKey="bnb" stroke="#FF5733" unit=" $" dot={false}/>
+              <Line type="monotone" dataKey="bch" stroke="#8401EF" unit=" $" dot={false}/>
+              <Line type="monotone" dataKey="egld" stroke="#004CFF" unit=" $" dot={false}/>
+              <Line type="monotone" dataKey="sol" stroke="#04B5F9" unit=" $" dot={false}/>
+              <Line type="monotone" dataKey="ltc" stroke="#FF33E0" unit=" $" dot={false}/>
+              <Line type="monotone" dataKey="avax" stroke="#03D502" unit=" $" dot={false}/>
             </LineChart>
           </ResponsiveContainer>
         )}
