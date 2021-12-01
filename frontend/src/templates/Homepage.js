@@ -25,7 +25,7 @@ dayjs().format();
 const Homepage = () => {
   const [dataApi, setDataApi] = useState(null);
   const [dataApi2, setDataApi2] = useState(null);
-  const [dataGrapĥ, setDataGraph] = useState([]);
+  const [dataGraph, setDataGraph] = useState([]);
   const [timeInterval, setTimeInterval] = useState("7d");
   useEffect(() => {
     axios
@@ -152,17 +152,7 @@ const Homepage = () => {
         )}
         {dataApi && (
           <ResponsiveContainer width="100%" height="100%">
-            <LineChart
-              width={500}
-              height={300}
-              data={dataGrapĥ}
-              margin={{
-                top: 5,
-                right: 30,
-                left: 30,
-                bottom: 5,
-              }}
-            >
+            <LineChart className="chart" data={dataGraph}>
               <CartesianGrid strokeDasharray="1 10" />
               <XAxis dataKey="timestamp" tick={false}/>
               <YAxis />
