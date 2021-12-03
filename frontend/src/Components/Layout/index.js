@@ -21,6 +21,7 @@ export default function Layout(props) {
                         <li><Link to="/news">News</Link></li>
                         <li><Link to="/informations">About</Link></li>
                         <li> <Link to="/Signin"> Login </Link></li>
+                        <li> <Link to="/Inscription"> Signup </Link></li>
                     </ul>
                 </aside>
                 <main className="left">

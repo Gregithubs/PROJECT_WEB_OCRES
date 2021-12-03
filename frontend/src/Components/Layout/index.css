@@ -160,11 +160,16 @@ a {
   width : 130px; 
   height : 35px;
   border-radius : 10px;
-  margin-top: 5px;
-  margin-left: 70rem; 
+}
+.login{
+  display:flex;
+  align-items: center;
+  flex:auto;
+  justify-content: center;
+  flex-direction: column ;
 }
 
-.login{
+.signup{
   display:flex;
   align-items: center;
   flex:auto;

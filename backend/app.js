@@ -6,8 +6,12 @@ const hostname="localhost"
 const port=3001
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
-
+const mongoose = require('mongoose')
 var app = express();
+require('dotenv/config');
+const bodyparser=require('body-parser')
+
+app.use(bodyparser.json());
 
 app.get ('/test', (req,res)=> {
     res.json({
@@ -21,6 +25,12 @@ app.put('/test',(req,res)=>{
         data:"This is a PUT"
     });
 });
+
+//connect to DB
+mongoose.connect(process.env.DB_CONNECTION,
+    {useNewUrlParser: true},
+    () => console.log('Connected to DB!')
+);
 
 app.listen(port,hostname),() =>{
     console.log(`mon serveur fonctionne sur http://${hostname}:${port}\n`);

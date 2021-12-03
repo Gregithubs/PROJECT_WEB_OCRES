@@ -1,12 +1,12 @@
 import React from 'react';
 import { Formik } from 'formik';
 import Layout from '../Components/Layout';
-const Signin = () => (
+const Signup = () => (
   <Layout>
-  <div className="login">
+  <div className="signup">
     <h1>Sign in!</h1>
     <Formik
-      initialValues={{ email: 'entrez votre mail', password: 'entrez votre mot de passe' }}
+      initialValues={{surname:"",name:"", email: 'entrez votre mail', password: 'entrez votre mot de passe' }}
       validate={values => {
         const errors = {};
         if (!values.email) {
@@ -35,6 +35,28 @@ const Signin = () => (
         isSubmitting
       }) => (
         <form onSubmit={handleSubmit} className="formulaire">
+            <ul>
+                Nom :
+                <input
+                type="surname"
+                name="surname"
+                onChange={handleCHange}
+                onBlur={handleBlur}
+                value={values.name} 
+            />
+            {errors.surname && touched.surname && errors.surname}
+            </ul> 
+            <ul>
+                Prénom :
+                <input
+                type="name"
+                name="name"
+                onChange={handleCHange}
+                onBlur={handleBlur}
+                value={values.name} 
+            />
+            {errors.name && touched.name && errors.name}
+            </ul>   
           <ul>
             
             <input
@@ -68,4 +90,4 @@ const Signin = () => (
   </Layout>
 );
 
-export default Signin;
+export default Signup;
