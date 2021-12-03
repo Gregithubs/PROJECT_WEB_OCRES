@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Homepage from './templates/Homepage';
 import User from './templates/User';
-import News from './templates/News';
 import Informations from './templates/Informations';
 import Signin from './templates/Signin';
 import Wallet from './templates/Wallet';
@@ -15,7 +14,6 @@ render(
     <Routes>
       <Route path="/" element={<Homepage />} />
       <Route path="/user" element={<User />} />
-      <Route path="/news" element={<News />} />
       <Route path="/informations" element={<Informations />} />
       <Route path="/Signin" element={<Signin/>}/>
       <Route path="/Wallet" element={<Wallet/>}/>

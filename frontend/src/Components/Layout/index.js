@@ -18,7 +18,6 @@ export default function Layout(props) {
                     <ul className="menu">
                         <li><Link to="/"><span className="Title">Home</span></Link></li>
                         <li><Link to="/user">Profil</Link></li>
-                        <li><Link to="/news">News</Link></li>
                         <li><Link to="/informations">About</Link></li>
                         <li> <Link to="/Signin"> Login </Link></li>
                         <li> <Link to="/Inscription"> Signup </Link></li>
