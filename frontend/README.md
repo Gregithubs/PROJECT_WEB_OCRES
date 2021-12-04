@@ -15,6 +15,7 @@ https://coinranking.com/
 # Compilation du code
 
 cd .\frontend\
+npm install
 npm start
 
 La bibliothèque npm à besoin d'être installée.
