@@ -1,5 +1,5 @@
 import React from 'react';
-import SummaryCard2 from '../Components/SummaryCard copy';
+import SummaryCard2 from '../Components/SummaryCard2';
 
 export default {
   title: 'SummaryCard2',
