@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import SummaryCard2 from "../Components/summaryCard2";
+import SummaryCard2 from "../Components/SummaryCard2";
 import Layout from "../Components/Layout";
 import { apiKey } from "../api/nomicsApi";
 

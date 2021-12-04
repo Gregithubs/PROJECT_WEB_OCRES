@@ -3,7 +3,7 @@ import axios from "axios";
 import millify from "millify";
 import * as dayjs from "dayjs";
 import "dayjs/locale/fr";
-import SummaryCard from "../Components/summaryCard";
+import SummaryCard from "../Components/SummaryCard";
 import Layout from "../Components/Layout";
 import { apiKey } from "../api/nomicsApi";
 import {
