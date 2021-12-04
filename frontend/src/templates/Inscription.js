@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik } from 'formik';
 import Layout from '../Components/layout';
+
 const Signup = () => (
   <Layout>
   <div className="signup">
@@ -40,7 +41,7 @@ const Signup = () => (
                 <input
                 type="surname"
                 name="surname"
-                onChange={handleCHange}
+                onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.name} 
             />
@@ -51,7 +52,7 @@ const Signup = () => (
                 <input
                 type="name"
                 name="name"
-                onChange={handleCHange}
+                onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.name} 
             />

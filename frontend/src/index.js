@@ -7,6 +7,7 @@ import User from './templates/User';
 import Informations from './templates/Informations';
 import Signin from './templates/Signin';
 import Wallet from './templates/Wallet';
+import Signup from './templates/Inscription';
 
 const rootElement = document.getElementById("root");
 render(
@@ -17,6 +18,7 @@ render(
       <Route path="/user" element={<User />} />
       <Route path="/informations" element={<Informations />} />
       <Route path="/wallet" element={<Wallet/>}/>
+      <Route path="/signup" element={<Signup/>}/>
       {/* Ajouter des Routes (pages) en plus pour utiliser la navigation react router */}
       {/* https://reactrouter.com/docs/en/v6/getting-started/tutorial */}
     </Routes>
