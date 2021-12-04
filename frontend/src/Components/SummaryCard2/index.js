@@ -44,4 +44,4 @@ const SummaryCard2 = ({ currencyData = {
     )
 }
 
-export default SummaryCard2
+export default SummaryCard2;

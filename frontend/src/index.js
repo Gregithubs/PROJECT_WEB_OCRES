@@ -12,11 +12,11 @@ const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Homepage />} />
+      <Route path="/" element={<Signin/>}/>
+      <Route path="/home" element={<Homepage />} />
       <Route path="/user" element={<User />} />
       <Route path="/informations" element={<Informations />} />
-      <Route path="/Signin" element={<Signin/>}/>
-      <Route path="/Wallet" element={<Wallet/>}/>
+      <Route path="/wallet" element={<Wallet/>}/>
       {/* Ajouter des Routes (pages) en plus pour utiliser la navigation react router */}
       {/* https://reactrouter.com/docs/en/v6/getting-started/tutorial */}
     </Routes>

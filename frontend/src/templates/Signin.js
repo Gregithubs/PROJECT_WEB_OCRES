@@ -1,12 +1,13 @@
 import React from 'react';
 import { Formik } from 'formik';
-import Layout from '../Components/Layout';
+import Layout2 from '../Components/Login';
+
 const Signin = () => (
-  <Layout>
+  <Layout2>
   <div className="login">
-    <h1>Sign in!</h1>
+  <h1>Sign in!</h1>
     <Formik
-      initialValues={{ email: 'entrez votre mail', password: 'entrez votre mot de passe' }}
+      initialValues={{ email: 'Entrez votre mail', password: 'Password' }}
       validate={values => {
         const errors = {};
         if (!values.email) {
@@ -23,8 +24,7 @@ const Signin = () => (
           alert(JSON.stringify(values, null, 2));
           setSubmitting(false);
         }, 400);
-      }}
-    >
+      }}>
       {({
         values,
         errors,
@@ -36,7 +36,6 @@ const Signin = () => (
       }) => (
         <form onSubmit={handleSubmit} className="formulaire">
           <ul>
-            
             <input
             type="email"
             name="email"
@@ -46,17 +45,15 @@ const Signin = () => (
           />
           {errors.email && touched.email && errors.email}
           </ul>
-         <ul>
-           
-          <input
-          
-            type="password"
-            name="password"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.password}
-          />
-          {errors.password && touched.password && errors.password}
+          <ul>
+            <input
+              type="password"
+              name="password"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.password}
+            />
+            {errors.password && touched.password && errors.password}
           </ul>
           <button type="submit" disabled={isSubmitting}>
             Submit
@@ -65,7 +62,7 @@ const Signin = () => (
       )}
     </Formik>
   </div>
-  </Layout>
+  </Layout2>
 );
 
 export default Signin;
