@@ -30,7 +30,7 @@ router.post('/', async (req,res) => {
 //Access a specific user
 router.get(`/:userId`, async (req,res) =>{
   try{
- const user = await User.findById(req.params.userId);
+ const user =  await User.findById(req.params.userId);
  res.json(post);
   }catch(error){
     res.json({message:error})
