@@ -1,6 +1,6 @@
 import React from 'react';
 import { Formik } from 'formik';
-import Layout2 from '../Components/Login';
+import Layout2 from '../Components/login';
 
 const Signin = () => (
   <Layout2>

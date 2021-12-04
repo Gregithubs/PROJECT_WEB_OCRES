@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import millify from "millify";
 
-import SummaryCard from "../Components/SummaryCard";
-import Layout from "../Components/Layout";
+import SummaryCard from "../Components/summaryCard";
+import Layout from "../Components/layout";
 
 import { apiKey } from "../api/nomicsApi";
 import {

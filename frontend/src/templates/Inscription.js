@@ -1,6 +1,6 @@
 import React from 'react';
 import { Formik } from 'formik';
-import Layout from '../Components/Layout';
+import Layout from '../Components/layout';
 const Signup = () => (
   <Layout>
   <div className="signup">

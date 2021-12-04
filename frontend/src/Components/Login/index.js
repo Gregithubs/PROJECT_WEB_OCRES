@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link } from "react-router-dom";
-import "../Login/index.css"
+import "./index.css"
 
-export default function Layout2(props) {
+export default function login(props) {
 
     return (
         <div className="app-header2">
