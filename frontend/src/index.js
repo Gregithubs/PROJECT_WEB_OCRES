@@ -7,7 +7,7 @@ import User from './templates/User';
 import Informations from './templates/Informations';
 import Signin from './templates/Signin';
 import Wallet from './templates/Wallet';
-import Signup from './templates/Inscription';
+import Signup from './templates/Signup';
 
 const rootElement = document.getElementById("root");
 render(
