@@ -41,11 +41,12 @@
   justify-content: center;
   background-color: #202022;
   margin-top: 6rem;
+  padding-bottom: 3rem;
   line-height: 2rem;
 }
 
 .login h1 {
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
 }
 
 .submit {
