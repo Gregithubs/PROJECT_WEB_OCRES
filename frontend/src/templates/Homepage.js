@@ -4,7 +4,7 @@ import millify from "millify";
 import * as dayjs from "dayjs";
 import "dayjs/locale/fr";
 import SummaryCard from "../Components/summaryCard";
-import Layout from "../Components/layout";
+import Layout from "../Components/Layout";
 import { apiKey } from "../api/nomicsApi";
 import {
   LineChart,

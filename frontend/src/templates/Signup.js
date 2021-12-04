@@ -1,6 +1,6 @@
 import React from 'react';
 import { Formik } from 'formik';
-import Layout2 from '../Components/login';
+import Layout2 from '../Components/Login';
 import { Link } from "react-router-dom";
 
 const Signup = () => (

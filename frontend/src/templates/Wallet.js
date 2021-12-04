@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import SummaryCard2 from "../Components/summaryCard2";
-import Layout from "../Components/layout";
+import Layout from "../Components/Layout";
 import { apiKey } from "../api/nomicsApi";
 
 const Wallet = () => {
