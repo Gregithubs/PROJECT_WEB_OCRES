@@ -25,7 +25,7 @@
   align-items: center;
   flex-direction: column;
   width : 130px; 
-  font-size: 23px;
+  font-size: 18px;
   height : 35px;
   padding-top: 2rem;
   justify-content: center;
@@ -51,4 +51,13 @@
 
 .submit {
   margin-top: 1rem;
+}
+
+.submit2 {
+  margin-top: 1rem;
+}
+
+.change {
+  padding-top: 1rem;
+  font-size: 14px;
 }

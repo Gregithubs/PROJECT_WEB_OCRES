@@ -1,9 +1,10 @@
 import React from 'react';
 import { Formik } from 'formik';
-import Layout from '../Components/layout';
+import Layout2 from '../Components/login';
+import { Link } from "react-router-dom";
 
 const Signup = () => (
-  <Layout>
+  <Layout2>
   <div className="signup">
     <h1>Sign up!</h1>
     <Formik
@@ -78,11 +79,14 @@ const Signup = () => (
           <button className="submit" disabled={isSubmitting}>
             Submit
           </button>
+          <div className="change">
+            <Link to="/">Déjà un compte?</Link>
+          </div>
         </form>
       )}
     </Formik>
   </div>
-  </Layout>
+  </Layout2>
 );
 
 export default Signup;

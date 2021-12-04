@@ -40,6 +40,7 @@ const User = () => {
 
         </main>
     </Layout>
-  )
-}
+  );
+};
+
 export default User;

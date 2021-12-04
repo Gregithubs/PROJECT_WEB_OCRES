@@ -1,6 +1,5 @@
 import React from 'react'
 import * as R from 'ramda'
-
 import "./index.css"
 
 const SummaryCard = ({ currencyData = {
@@ -55,4 +54,4 @@ const SummaryCard = ({ currencyData = {
     )
 }
 
-export default SummaryCard
+export default SummaryCard;

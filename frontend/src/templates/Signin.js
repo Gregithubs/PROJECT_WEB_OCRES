@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik } from 'formik';
 import Layout2 from '../Components/login';
+import { Link } from "react-router-dom";
 
 const Signin = () => (
   <Layout2>
@@ -56,8 +57,11 @@ const Signin = () => (
             {errors.password && touched.password && errors.password}
           </ul>
           <button className="submit" disabled={isSubmitting}>
-            Submit
+            Valider
           </button>
+          <div className="change">
+            <Link to="/signup">Pas de compte?</Link>
+          </div>
         </form>
       )}
     </Formik>

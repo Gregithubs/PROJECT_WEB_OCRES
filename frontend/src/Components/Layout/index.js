@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-
 import "./index.css"
 
 export default function Layout(props) {
@@ -19,7 +18,6 @@ export default function Layout(props) {
                         <li><Link to="/home"><span className="Title">Home</span></Link></li>
                         <li><Link to="/user">Profil</Link></li>
                         <li><Link to="/informations">About</Link></li>
-                        <li><Link to="/signup"> SignUp </Link></li>
                     </ul>
                 </aside>
                 <main className="left">
