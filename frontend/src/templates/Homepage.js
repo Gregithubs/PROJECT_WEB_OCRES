@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import millify from "millify";
-
+import * as dayjs from "dayjs";
+import "dayjs/locale/fr";
 import SummaryCard from "../Components/summaryCard";
 import Layout from "../Components/layout";
-
 import { apiKey } from "../api/nomicsApi";
 import {
   LineChart,
@@ -17,8 +17,6 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-import * as dayjs from "dayjs";
-import "dayjs/locale/fr";
 dayjs().locale("fr");
 dayjs().format();
 
@@ -27,6 +25,7 @@ const Homepage = () => {
   const [dataApi2, setDataApi2] = useState(null);
   const [dataGraph, setDataGraph] = useState([]);
   const [timeInterval, setTimeInterval] = useState("7d");
+  
   useEffect(() => {
     axios
       .get(
