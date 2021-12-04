@@ -1,8 +1,8 @@
 import React from 'react';
-import SummaryCard from '../Components/summaryCard';
+import SummaryCard2 from '../Components/summaryCard2';
 
 export default {
-  title: 'SummaryCard',
+  title: 'SummaryCard2',
 };
 
 const obj = {
@@ -50,8 +50,8 @@ const obj = {
 }
 
 
-export const text = () => <SummaryCard currencyData={obj}/>;
+export const text = () => <SummaryCard2 currencyData={obj}/>;
 
 export const empty = () => (
-  <SummaryCard />
+  <SummaryCard2 />
 );

@@ -1,0 +1,49 @@
+.app-header2 {
+  background-color: #181818;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #ffbb00; 
+}
+
+.header2 {
+  background-color: #2b2929;
+  display: flex;
+  font-weight: bold;
+  font-size: 40px;
+  justify-content: center;
+}
+
+.left2 {
+  display: flex; 
+  justify-content: center; 
+  padding: 2rem;
+}
+
+.formulaire {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width : 130px; 
+  font-size: 23px;
+  height : 35px;
+  padding-top: 2rem;
+  justify-content: center;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  flex-direction: column ;
+  width: 30rem;
+  height: 20rem;
+  border-radius: 100px;
+  justify-content: center;
+  background-color: #202022;
+  margin-top: 6rem;
+  line-height: 2rem;
+}
+
+.login h1 {
+  padding-bottom: 3rem;
+}

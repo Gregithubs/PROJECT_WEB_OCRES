@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import millify from "millify";
 
-import SummaryCard from "../Components/SummaryCard";
-import Layout from "../Components/Layout";
+import SummaryCard from "../Components/summaryCard";
+import Layout from "../Components/layout";
 
 import { apiKey } from "../api/nomicsApi";
 import {
@@ -171,27 +171,29 @@ const Homepage = () => {
           </ResponsiveContainer>
         )}
       </main>
-      <nav className="total">
-        <ul>
-          <div>Total Cryptocurrencies</div>
-          {dataApi2 ? millify(dataApi2.totalCoins) : null}<br />
-          <div>Total Exchanges</div>
-          {dataApi2 ? millify(dataApi2.totalExchanges) : null}<br />
-          <div>Total Market</div>
-          {dataApi2 ? `$ ${millify(dataApi2.totalMarkets)}` : null}<br />
-          <div>Total Market Cap</div>
-          {dataApi2 ? `$ ${millify(dataApi2.totalMarketCap)}` : null}<br />
-          <div>Total 24h Volume</div>
-          {dataApi2 ? `$ ${millify(dataApi2.total24hVolume)}` : null}<br /><br />
-          <div>Change time interval</div>
-          <select onChange={(e) => {
-            setTimeInterval(e.target.value)
-          }}>
-            <option value="7d">7 Days</option>
-            <option value="30d">1 Month</option>
-          </select>
-        </ul>
-      </nav>
+      <div className="containerT">
+        <nav className="total">
+          <ul>
+            <div>Total Cryptocurrencies</div>
+            {dataApi2 ? millify(dataApi2.totalCoins) : null}<br />
+            <div>Total Exchanges</div>
+            {dataApi2 ? millify(dataApi2.totalExchanges) : null}<br />
+            <div>Total Market</div>
+            {dataApi2 ? `$ ${millify(dataApi2.totalMarkets)}` : null}<br />
+            <div>Total Market Cap</div>
+            {dataApi2 ? `$ ${millify(dataApi2.totalMarketCap)}` : null}<br />
+            <div>Total 24h Volume</div>
+            {dataApi2 ? `$ ${millify(dataApi2.total24hVolume)}` : null}<br /><br />
+            <div>Change time interval</div>
+            <select onChange={(e) => {
+              setTimeInterval(e.target.value)
+            }}>
+              <option value="7d">7 Days</option>
+              <option value="30d">1 Month</option>
+            </select>
+          </ul>
+        </nav>
+      </div>
     </Layout>
   );
 };

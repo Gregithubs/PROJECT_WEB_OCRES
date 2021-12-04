@@ -16,11 +16,10 @@ export default function Layout(props) {
             <div className="main">
                 <aside>
                     <ul className="menu">
-                        <li><Link to="/"><span className="Title">Home</span></Link></li>
+                        <li><Link to="/home"><span className="Title">Home</span></Link></li>
                         <li><Link to="/user">Profil</Link></li>
                         <li><Link to="/informations">About</Link></li>
-                        <li> <Link to="/Signin"> Login </Link></li>
-                        <li> <Link to="/Inscription"> Signup </Link></li>
+                        <li><Link to="/signup"> SignUp </Link></li>
                     </ul>
                 </aside>
                 <main className="left">

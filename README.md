@@ -12,7 +12,7 @@ Ce repo git contient deux repertoires. L'un concerne la partie backend et l'autr
 
 Les deux repertoires ont été initialisé pour vous aider à démarrer le projet dans les meilleures conditions.
 
-Chacun de ces repertoires contient un README.md qui vous pouvez vous approprier. Nous vous encourageons à le faire en y mettant toute les informations nécessaires à la compréhension de votre projet
+Chacun de ces repertoires contient un README.md que vous pouvez vous approprier. Nous vous encourageons à le faire en y mettant toute les informations nécessaires à la compréhension de votre projet
 
 ## Instructions
 
@@ -21,3 +21,9 @@ Les instructions sont à retrouver dans le pdf instruction.pdf.
 **Le non respect de ces instructions entraînera des pertes de points alors prenez le temps de tout lire et de poser des questions si vous ne comprenez pas**
 
 Pour rappel, la probabilité de recevoir une réponse à un mail envoyé quelques heures avant le rendu est très proche de 0.
+
+Lien Trello : https://trello.com/projetweb259
+
+Lien Figma : https://www.figma.com/file/bpNMhB7lkEtxeMY3DbOZll/DM-Web?node-id=0%3A1
+
+Emilien Biron & Grégoire Pateyron
