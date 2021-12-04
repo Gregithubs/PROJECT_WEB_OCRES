@@ -5,9 +5,9 @@ import Layout from '../Components/layout';
 const Signup = () => (
   <Layout>
   <div className="signup">
-    <h1>Sign in!</h1>
+    <h1>Sign up!</h1>
     <Formik
-      initialValues={{surname:"",name:"", email: 'entrez votre mail', password: 'entrez votre mot de passe' }}
+      initialValues={{surname:"Nom",name:"Prénom", email: 'Entrez votre mail', password: 'Password' }}
       validate={values => {
         const errors = {};
         if (!values.email) {
@@ -24,8 +24,7 @@ const Signup = () => (
           alert(JSON.stringify(values, null, 2));
           setSubmitting(false);
         }, 400);
-      }}
-    >
+      }}>
       {({
         values,
         errors,
@@ -37,18 +36,16 @@ const Signup = () => (
       }) => (
         <form onSubmit={handleSubmit} className="formulaire">
             <ul>
-                Nom :
                 <input
                 type="surname"
                 name="surname"
                 onChange={handleChange}
                 onBlur={handleBlur}
-                value={values.name} 
+                value={values.surname} 
             />
             {errors.surname && touched.surname && errors.surname}
             </ul> 
             <ul>
-                Prénom :
                 <input
                 type="name"
                 name="name"
@@ -58,8 +55,7 @@ const Signup = () => (
             />
             {errors.name && touched.name && errors.name}
             </ul>   
-          <ul>
-            
+          <ul> 
             <input
             type="email"
             name="email"
@@ -69,10 +65,8 @@ const Signup = () => (
           />
           {errors.email && touched.email && errors.email}
           </ul>
-         <ul>
-           
+         <ul> 
           <input
-          
             type="password"
             name="password"
             onChange={handleChange}
@@ -81,7 +75,7 @@ const Signup = () => (
           />
           {errors.password && touched.password && errors.password}
           </ul>
-          <button type="submit" disabled={isSubmitting}>
+          <button className="submit" disabled={isSubmitting}>
             Submit
           </button>
         </form>
