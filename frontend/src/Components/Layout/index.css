@@ -111,12 +111,37 @@ a {
   background: #ffffff52;
 }
 
-.signup{
-  display:flex;
+.formulaire {
+  display: flex;
   align-items: center;
-  flex:auto;
+  flex-direction: column;
+  width : 130px; 
+  font-size: 23px;
+  height : 35px;
+  padding-top: 2rem;
   justify-content: center;
+}
+
+.signup{
+  display: flex;
+  align-items: center;
   flex-direction: column ;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 100px;
+  justify-content: center;
+  background-color: #202022;
+  margin-top: 5rem;
+  padding-bottom: 8rem;
+  line-height: 2rem;
+}
+
+.signup h1 {
+  padding-bottom: 6rem;
+}
+
+.submit {
+  margin-top: 1rem;
 }
 
 @media screen and (max-width: 768px) {

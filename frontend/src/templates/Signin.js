@@ -5,7 +5,7 @@ import Layout2 from '../Components/login';
 const Signin = () => (
   <Layout2>
   <div className="login">
-  <h1>Sign in!</h1>
+    <h1>Sign in!</h1>
     <Formik
       initialValues={{ email: 'Entrez votre mail', password: 'Password' }}
       validate={values => {
@@ -55,7 +55,7 @@ const Signin = () => (
             />
             {errors.password && touched.password && errors.password}
           </ul>
-          <button type="submit" disabled={isSubmitting}>
+          <button className="submit" disabled={isSubmitting}>
             Submit
           </button>
         </form>
