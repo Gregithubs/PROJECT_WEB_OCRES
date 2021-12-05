@@ -13,8 +13,7 @@ a {
   color: #09d3ac;
 }
 
-.menu li :hover
-{
+.menu li :hover {
   background: #ffffff52;
 }
 
@@ -86,7 +85,7 @@ a {
   justify-content: center;
 }
 
-.signup{
+.signup {
   display: flex;
   align-items: center;
   flex-direction: column ;
