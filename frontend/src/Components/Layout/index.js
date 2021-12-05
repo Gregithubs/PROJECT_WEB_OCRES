@@ -14,6 +14,14 @@ export default function Layout(props) {
             </header>
             <div className="main">
                 <aside>
+                    <div className="dropdown">
+                        <button className="btnMenu">Menu</button>
+                        <div className="dropdownM">
+                            <Link to="/home"><span className="Title">Home</span></Link>
+                            <Link to="/user">Profil</Link>
+                            <Link to="/informations">About</Link>
+                        </div>
+                    </div>
                     <ul className="menu">
                         <li><Link to="/home"><span className="Title">Home</span></Link></li>
                         <li><Link to="/user">Profil</Link></li>
