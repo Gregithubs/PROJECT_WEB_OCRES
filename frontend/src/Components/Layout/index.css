@@ -66,9 +66,9 @@ a {
   width : 130px; 
   height : 35px;
   border-radius : 10px;
-  position:fixed;
+  position: fixed;
   margin-top: 5px;
-  margin-left: 70rem; 
+  margin-right: 70rem; 
 }
 
 .btn :hover{
