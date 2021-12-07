@@ -31,10 +31,32 @@ router.post('/', async (req,res) => {
 router.get(`/:userId`, async (req,res) =>{
   try{
  const user =  await User.findById(req.params.userId);
- res.json(post);
+ res.json(user);
   }catch(error){
     res.json({message:error})
   }
 })
 
+
+//Deletes a user
+router.delete('/:userId', async (req,res) => {
+  try{
+
+  const removedUser = await User.remove({_id:req.params.userId});
+  res.json(removedUser)
+  }catch(error){
+    res.json({message:error})
+  }
+})
+
+//Updates a user
+router.patch('/:userId', async (req,res) => {
+  try{
+    const updatedUser = await User.updateOne({_id:req.params.userId},
+     {$set:{ name :req.body.name }})
+    res.json(updatedUser)
+  }catch(error){
+    res.json({message:error})
+  }
+})
 module.exports = router;
