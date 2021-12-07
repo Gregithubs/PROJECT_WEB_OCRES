@@ -1,9 +1,25 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Formik } from 'formik';
 import Layout2 from '../Components/Login';
 import { Link } from "react-router-dom";
+import { Axios } from 'axios';
 
-const Signup = () => (
+const Signup = () => {
+  const [nameReg,setNameReg]=useState("");
+  const [surnameReg,setSurnameReg]=useState("");
+  const [usernameReg,setUsernameReg]=useState("");
+  const [passwordReg,setPasswordReg]=useState("");
+  const register=() =>{
+    Axios.post("http//localhost:3001/users",{
+      surname:surnameReg,
+      name:nameReg,
+      username:usernameReg,
+      password:passwordReg,
+    }).then((response) =>{
+      console.log(response);
+    });
+  }
+  return(
   <Layout2>
   <div className="signup">
     <h1>Sign up!</h1>
@@ -40,7 +56,8 @@ const Signup = () => (
                 <input
                 type="surname"
                 name="surname"
-                onChange={handleChange}
+                onChange={handleChange,(e) => {setSurnameReg(e.target.value);
+                }}
                 onBlur={handleBlur}
                 value={values.surname} 
             />
@@ -50,7 +67,7 @@ const Signup = () => (
                 <input
                 type="name"
                 name="name"
-                onChange={handleChange}
+                onChange={handleChange,setNameReg}
                 onBlur={handleBlur}
                 value={values.name} 
             />
@@ -60,7 +77,7 @@ const Signup = () => (
             <input
             type="email"
             name="email"
-            onChange={handleChange}
+            onChange={handleChange,setUsernameReg}
             onBlur={handleBlur}
             value={values.email}
           />
@@ -70,7 +87,7 @@ const Signup = () => (
           <input
             type="password"
             name="password"
-            onChange={handleChange}
+            onChange={handleChange,setPasswordReg}
             onBlur={handleBlur}
             value={values.password}
           />
@@ -87,6 +104,6 @@ const Signup = () => (
     </Formik>
   </div>
   </Layout2>
-);
+  )};
 
 export default Signup;

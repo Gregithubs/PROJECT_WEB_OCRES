@@ -1,9 +1,11 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Formik } from 'formik';
 import Layout2 from '../Components/Login';
 import { Link } from "react-router-dom";
 
-const Signin = () => (
+
+const Signin = () => {
+  return(
   <Layout2>
   <div className="login">
     <h1>Sign in!</h1>
@@ -67,6 +69,6 @@ const Signin = () => (
     </Formik>
   </div>
   </Layout2>
-);
+  )};
 
 export default Signin;
