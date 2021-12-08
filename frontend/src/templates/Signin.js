@@ -1,72 +1,51 @@
 import React,{useState} from 'react';
 import { Formik } from 'formik';
 import Layout2 from '../Components/Login';
+import {render} from "react-dom"; 
+import AlertTemplate from "react-alert-template-basic";
 import { Link } from "react-router-dom";
-
+var axios=require('axios');
 
 const Signin = () => {
+  const [username,setUsername]=useState("");
+  const [password,setPassword]=useState("");
+  const login=() =>{
+    axios.get("http://localhost:3001/users",{
+      username:username,
+      password:password,
+    }).then((response) =>{
+      console.log(response.data);
+    });
+  }
   return(
   <Layout2>
-  <div className="login">
+  <div className="signup">
     <h1>Sign in!</h1>
-    <Formik
-      initialValues={{ email: 'Entrez votre mail', password: 'Password' }}
-      validate={values => {
-        const errors = {};
-        if (!values.email) {
-          errors.email = 'Required';
-        } else if (
-          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-        ) {
-          errors.email = 'Invalid email address';
-        }
-        return errors;
-      }}
-      onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
-      }}>
-      {({
-        values,
-        errors,
-        touched,
-        handleChange,
-        handleBlur,
-        handleSubmit,
-        isSubmitting
-      }) => (
-        <form onSubmit={handleSubmit} className="formulaire">
-          <ul>
+        <form className="formulaire">
+          <ul> 
             <input
             type="email"
+            placeholder="Votre adresse mail"
             name="email"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.email}
+            onChange={(e)=>{setUsername(e.target.value)}}
           />
-          {errors.email && touched.email && errors.email}
           </ul>
-          <ul>
-            <input
-              type="password"
-              name="password"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.password}
-            />
-            {errors.password && touched.password && errors.password}
+         <ul> 
+          <input
+            type="password"
+            placeholder="Votre mot de passe"
+            name="password"
+            onChange={(e)=>{setPassword(e.target.value)} }
+          />
           </ul>
-          <button className="submit" disabled={isSubmitting}>
-            Valider
+          <button className="submit" onClick={login}>
+            Submit
           </button>
           <div className="change">
             <Link to="/signup">Pas de compte?</Link>
           </div>
         </form>
-      )}
-    </Formik>
+      )
   </div>
   </Layout2>
   )};

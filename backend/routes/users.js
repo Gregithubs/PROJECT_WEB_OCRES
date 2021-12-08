@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const User = require('../models/User')
 
-/* GET users listing. */
+/* GET users listing. 
 router.get('/', async function(req, res, next) {
   try { 
     const users = await User.find();
@@ -12,6 +12,7 @@ router.get('/', async function(req, res, next) {
     res.json({message:error});
   };
 });
+*/
 //Submits a user
 router.post('/', async (req,res) => {
   const user = new User({
@@ -37,6 +38,13 @@ router.get(`/:userId`, async (req,res) =>{
   }
 })
 
+router.get('/', async(req,res) =>{
+  try{ const user= await User.find({username:req.body.username,password:req.body.password});
+  res.json(user);
+}catch(error){
+  res.json({message:error})
+}
+})
 
 //Deletes a user
 router.delete('/:userId', async (req,res) => {

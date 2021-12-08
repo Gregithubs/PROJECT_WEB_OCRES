@@ -1,16 +1,17 @@
 import React,{useState} from 'react';
-import { Formik } from 'formik';
 import Layout2 from '../Components/Login';
 import { Link } from "react-router-dom";
 import { Axios } from 'axios';
+var axios=require('axios')
 
 const Signup = () => {
+  
   const [nameReg,setNameReg]=useState("");
   const [surnameReg,setSurnameReg]=useState("");
   const [usernameReg,setUsernameReg]=useState("");
   const [passwordReg,setPasswordReg]=useState("");
   const register=() =>{
-    Axios.post("http//localhost:3001/users",{
+    axios.post("http://localhost:3001/users",{
       surname:surnameReg,
       name:nameReg,
       username:usernameReg,
@@ -23,85 +24,49 @@ const Signup = () => {
   <Layout2>
   <div className="signup">
     <h1>Sign up!</h1>
-    <Formik
-      initialValues={{surname:"Nom",name:"Prénom", email: 'Entrez votre mail', password: 'Password' }}
-      validate={values => {
-        const errors = {};
-        if (!values.email) {
-          errors.email = 'Required';
-        } else if (
-          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-        ) {
-          errors.email = 'Invalid email address';
-        }
-        return errors;
-      }}
-      onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
-      }}>
-      {({
-        values,
-        errors,
-        touched,
-        handleChange,
-        handleBlur,
-        handleSubmit,
-        isSubmitting
-      }) => (
-        <form onSubmit={handleSubmit} className="formulaire">
+        <form className="formulaire">
             <ul>
                 <input
-                type="surname"
+                type="text"
+                placeholder="Nom"
                 name="surname"
-                onChange={handleChange,(e) => {setSurnameReg(e.target.value);
+                onChange={(e) => {setSurnameReg(e.target.value);
                 }}
-                onBlur={handleBlur}
-                value={values.surname} 
             />
-            {errors.surname && touched.surname && errors.surname}
             </ul> 
             <ul>
                 <input
-                type="name"
+                type="text"
+                placeholder="Prénom"
                 name="name"
-                onChange={handleChange,setNameReg}
-                onBlur={handleBlur}
-                value={values.name} 
+                onChange={(e) =>{setNameReg(e.target.value)
+                }}
             />
-            {errors.name && touched.name && errors.name}
             </ul>   
           <ul> 
             <input
             type="email"
+            placeholder="Votre adresse mail"
             name="email"
-            onChange={handleChange,setUsernameReg}
-            onBlur={handleBlur}
-            value={values.email}
+            onChange={(e)=>{setUsernameReg(e.target.value)}}
           />
-          {errors.email && touched.email && errors.email}
           </ul>
          <ul> 
           <input
             type="password"
+            placeholder="Votre mot de passe"
             name="password"
-            onChange={handleChange,setPasswordReg}
-            onBlur={handleBlur}
-            value={values.password}
+            onChange={(e)=>{setPasswordReg(e.target.value)} }
           />
-          {errors.password && touched.password && errors.password}
           </ul>
-          <button className="submit" disabled={isSubmitting}>
+          <button className="submit" onClick={register}>
             Submit
           </button>
           <div className="change">
             <Link to="/">Déjà un compte?</Link>
           </div>
         </form>
-      )}
-    </Formik>
+      )
   </div>
   </Layout2>
   )};
