@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../Components/Layout';
+import { Link } from "react-router-dom";
 
 var image=require('./jeandidier.jpg')
 
@@ -25,7 +26,7 @@ const User = () => {
             <p>Delete</p>
           </button>
           <button className="btn2" id="profilBtn2">
-            <p>Disconnect</p>
+            <Link to="/">Disconnect</Link> 
           </button>
         </textearea>
         
