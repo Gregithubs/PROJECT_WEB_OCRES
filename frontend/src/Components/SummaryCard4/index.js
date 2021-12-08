@@ -27,7 +27,7 @@ const SummaryCard2 = ({ currencyData = {
     }
 
     const priceFormatted = (Math.round(price * 100) / 100).toFixed(1)
-    const soldeFormatted = (Math.round(price * num_exchanges * 0.1) / 100).toFixed(1)
+    const soldeFormatted = (Math.round(price * num_exchanges * 0.27) / 100).toFixed(1)
 
     return (
         <div className="container">
@@ -37,7 +37,7 @@ const SummaryCard2 = ({ currencyData = {
             </div>
             <div className="info-container">
                 <p>Price : $ {priceFormatted}</p>
-                <p>Amount : {(Math.round(num_exchanges * 0.1) / 100).toFixed(2)}</p>
+                <p>Amount : {(Math.round(num_exchanges * 0.27) / 100).toFixed(2)}</p>
                 <p>Solde : $ {soldeFormatted}</p>
             </div>
         </div>
