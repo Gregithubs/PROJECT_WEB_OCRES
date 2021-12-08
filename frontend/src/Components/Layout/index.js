@@ -9,7 +9,8 @@ export default function Layout(props) {
             <header className="header">Crypto'cres
             <div className="header">
                 <button className="btn" id="walletBtn">
-                     <Link to="/wallet">Wallet</Link> </button>
+                     <Link to="/wallet">Wallet</Link> 
+                </button>
             </div>
             </header>
             <div className="main">
