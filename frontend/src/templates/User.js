@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../Components/Layout';
+import { Link } from "react-router-dom";
 
 var image=require('./jeandidier.jpg')
 
@@ -21,7 +22,14 @@ const User = () => {
             Numéro de téléphone : +33 7 99 99 99 91 <br />
             E-mail : jeandidieradorelacryptomonnaie@gmail.com
           </nav>
+          <button className="btn1" id="profilBtn1">
+            <p>Delete</p>
+          </button>
+          <button className="btn2" id="profilBtn2">
+            <Link to="/">Disconnect</Link> 
+          </button>
         </textearea>
+        
 
         <textearea className="amis">
           Vos Relations:<br /><br />
