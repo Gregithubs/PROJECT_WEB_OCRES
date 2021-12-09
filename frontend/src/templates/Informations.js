@@ -21,7 +21,7 @@ const Informations = () => {
         +33 6 00 00 00 01<br /><br />
 
         <h1>Adresse mail</h1><br />
-        ece.crypto@gmail.com<br />
+        cryptocres@gmail.com<br />
         </textearea>
 
         <textearea className="merci">
