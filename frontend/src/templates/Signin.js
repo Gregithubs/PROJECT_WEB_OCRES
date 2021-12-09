@@ -6,7 +6,7 @@ var axios=require('axios');
 const Signin = () => {
   const [username,setUsername]=useState("");
   const [password,setPassword]=useState("");
-  const login=() =>{
+  const login=() => {
     axios.get("http://localhost:3001/users",{
       username:username,
       password:password,
@@ -14,7 +14,7 @@ const Signin = () => {
       console.log(response.data);
     });
   }
-  return(
+  return (
   <Layout2>
   <div className="signup">
     <h1>Sign in!</h1>
@@ -32,7 +32,7 @@ const Signin = () => {
             type="password"
             placeholder="Votre mot de passe"
             name="password"
-            onChange={(e)=>{setPassword(e.target.value)} }
+            onChange={(e)=>{setPassword(e.target.value)}}
           />
           </ul>
           <button className="submit" onClick={login}>

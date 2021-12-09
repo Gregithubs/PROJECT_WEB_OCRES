@@ -10,7 +10,7 @@ const Signup = () => {
   const [surnameReg,setSurnameReg]=useState("");
   const [usernameReg,setUsernameReg]=useState("");
   const [passwordReg,setPasswordReg]=useState("");
-  const register=() =>{
+  const register=() => {
     axios.post("http://localhost:3001/users",{
       surname:surnameReg,
       name:nameReg,
@@ -20,7 +20,7 @@ const Signup = () => {
       console.log(response);
     });
   }
-  return(
+  return (
   <Layout2>
   <div className="signup">
     <h1>Sign up!</h1>
