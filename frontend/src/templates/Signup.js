@@ -16,7 +16,7 @@ const Signup = () => {
       name:nameReg,
       username:usernameReg,
       password:passwordReg,
-    }).then((response) =>{
+    }).then((response) => {
       console.log(response);
     });
   }

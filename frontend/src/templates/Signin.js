@@ -10,7 +10,7 @@ const Signin = () => {
     axios.get("http://localhost:3001/users",{
       username:username,
       password:password,
-    }).then((response) =>{
+    }).then((response) => {
       console.log(response.data);
     });
   }
