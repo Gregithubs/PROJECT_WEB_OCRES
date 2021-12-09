@@ -42,7 +42,6 @@ const Signin = () => {
             <Link to="/signup">Pas de compte?</Link>
           </div>
         </form>
-      )
   </div>
   </Layout2>
   )};
