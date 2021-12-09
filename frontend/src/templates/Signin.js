@@ -1,8 +1,5 @@
 import React,{useState} from 'react';
-import { Formik } from 'formik';
 import Layout2 from '../Components/Login';
-import {render} from "react-dom"; 
-import AlertTemplate from "react-alert-template-basic";
 import { Link } from "react-router-dom";
 var axios=require('axios');
 

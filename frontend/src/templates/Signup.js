@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import Layout2 from '../Components/Login';
 import { Link } from "react-router-dom";
-import { Axios } from 'axios';
+
 var axios=require('axios')
 
 const Signup = () => {
