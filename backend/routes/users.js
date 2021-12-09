@@ -40,6 +40,8 @@ router.get(`/:userId`, async (req,res) =>{
 
 router.get('/', async(req,res) =>{
   try{ const user= await User.find({username:req.body.username,password:req.body.password});
+  if (user)
+  }
   res.json(user);
 }catch(error){
   res.json({message:error})
@@ -47,10 +49,10 @@ router.get('/', async(req,res) =>{
 })
 
 //Deletes a user
-router.delete('/:userId', async (req,res) => {
+router.delete('/delete', async (req,res) => {
   try{
 
-  const removedUser = await User.remove({_id:req.params.userId});
+  const removedUser = await User.remove({username:req.body.username})
   res.json(removedUser)
   }catch(error){
     res.json({message:error})

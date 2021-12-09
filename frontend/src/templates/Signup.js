@@ -60,7 +60,7 @@ const Signup = () => {
           />
           </ul>
           <button className="submit" onClick={register}>
-            Submit
+            <Link to="/" >Submit </Link>
           </button>
           <div className="change">
             <Link to="/">Déjà un compte?</Link>

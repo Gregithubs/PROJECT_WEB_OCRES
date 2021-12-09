@@ -36,7 +36,7 @@ const Signin = () => {
           />
           </ul>
           <button className="submit" onClick={login}>
-            Submit
+            <Link to="/home" >Submit</Link>
           </button>
           <div className="change">
             <Link to="/signup">Pas de compte?</Link>
