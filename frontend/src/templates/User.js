@@ -6,7 +6,7 @@ var image=require('./jeandidier.jpg')
 
 const User = () => {
   var data = JSON.stringify({
-    "username": "ouioui@gmail.com"
+    "username": "jeandidiercryptotrader@gmail.com"
   });
   var config = {
     method: 'delete',

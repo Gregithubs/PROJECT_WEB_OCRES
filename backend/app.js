@@ -7,13 +7,29 @@ const port=3001
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 const mongoose = require('mongoose');
+
+
 var app = express();
+
 require('dotenv/config');
 const bodyparser=require('body-parser');
 const cors=require("cors");
 
 app.use(bodyparser.json());
 app.use(cors());
+
+app.listen(port,hostname),() =>{
+    console.log(`mon serveur fonctionne sur http://${hostname}:${port}\n`);
+}
+
+app.use(logger("dev"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
+
 
 app.get ('/test', (req,res)=> {
     res.json({
@@ -38,16 +54,5 @@ mongoose.connect(process.env.DB_CONNECTION,
 }
 ;
 
-app.listen(port,hostname),() =>{
-    console.log(`mon serveur fonctionne sur http://${hostname}:${port}\n`);
-}
-
-app.use(logger("dev"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
 
 module.exports = app;
