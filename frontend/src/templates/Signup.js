@@ -10,17 +10,17 @@ const Signup = () => {
   const [surnameReg,setSurnameReg]=useState("");
   const [usernameReg,setUsernameReg]=useState("");
   const [passwordReg,setPasswordReg]=useState("");
-  const register=() =>{
+  const register=() => {
     axios.post("http://localhost:3001/users",{
       surname:surnameReg,
       name:nameReg,
       username:usernameReg,
       password:passwordReg,
-    }).then((response) =>{
+    }).then((response) => {
       console.log(response);
     });
   }
-  return(
+  return (
   <Layout2>
   <div className="signup">
     <h1>Sign up!</h1>
@@ -66,7 +66,6 @@ const Signup = () => {
             <Link to="/">Déjà un compte?</Link>
           </div>
         </form>
-      )
   </div>
   </Layout2>
   )};
