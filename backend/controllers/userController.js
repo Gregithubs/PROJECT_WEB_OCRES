@@ -20,7 +20,7 @@ const authUser = asyncHandler(async (req, res) => {
     throw new Error("Invalid Email or Password");
   }
 });
-
+//Créée un user dans la db
 const registerUser = asyncHandler(async (req, res) => {
   const { name,surname, username, password } = req.body;
 
@@ -51,14 +51,14 @@ const registerUser = asyncHandler(async (req, res) => {
     throw new Error("User not found");
   }
 });
-//
+//modifie un user
 
 const updateUserProfile = asyncHandler(async (req, res) => {
-  const user = await User.findById(req.user._id);
+  const user = await User.findOne({username},{password});
 
   if (user) {
     user.name = req.body.name || user.name;
-    user.email = req.body.surname || user.email;
+    user.surname=req.body.name || user.surname;
     user.pic = req.body.pic || user.pic;
     if (req.body.password) {
       user.password = req.body.password;
@@ -69,9 +69,8 @@ const updateUserProfile = asyncHandler(async (req, res) => {
     res.json({
       _id: updatedUser._id,
       name: updatedUser.name,
-      email: updatedUser.email,
+      username: updatedUser.username,
       pic: updatedUser.pic,
-      isAdmin: updatedUser.isAdmin,
       //token: generateToken(updatedUser._id),
     });
   } else {

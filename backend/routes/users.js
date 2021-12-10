@@ -11,7 +11,7 @@ router.route("/profile").post(function(req,res){
   protect,
   updateUserProfile
 })
-//Deletes a user
+//Supprime un user
 router.delete('/delete', async (req,res) => {
   try{
 
