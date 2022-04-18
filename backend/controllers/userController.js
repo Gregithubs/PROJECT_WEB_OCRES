@@ -3,9 +3,9 @@ const User = require("../models/User.js");
 const generateToken =require("../utils/generateToken.js");
 //Compare l'user entré avec les users dans la database
 const authUser = asyncHandler(async (req, res) => {
-  const { email, password } = req.body;
+  const { username, password } = req.body;
 
-  const user = await User.findOne({ email });
+  const user = await User.findOne({ username });
 
   if (user && (await user.matchPassword(password))) {
     res.json({
